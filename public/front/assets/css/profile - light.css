@@ -6,7 +6,7 @@
   --font-color: rgba(255, 255, 255, 0.85);
   --paragraph-color: rgba(255, 255, 255, 0.65);
   --orange-btn:#cf7500;
- 
+
 
   --light-background: #F1F6F9;
   --light-font-color: #212A3E;
@@ -33,10 +33,10 @@ body {
   background-color: var(--light-background);
   font-family: "Cairo Play", cursive;
   color: var(--light-font-color);
-  background-image: url(../img/backgroundlolo.jpg);
-   background-image: linear-gradient(rgba(241, 246, 249,0.5), rgba(241, 246, 249,0.5)),url(../img/backgroundlolo.jpg); 
+  background-image: url(../front/assets/img/product/backgroundlolo.jpg);
+   background-image: linear-gradient(rgba(241, 246, 249,0.5), rgba(241, 246, 249,0.5)),url(../front/assets/img/product/backgroundlolo.jpg);
    /* background-image: linear-gradient(rgba(240, 240, 240,0.5), rgba(240, 240, 240,0.5)),url(../img/backgroundlolo.jpg);  */
-  
+
 }
 main {
   padding: 50px 15px;
@@ -146,13 +146,13 @@ ul {
   background-position: left;
   transition: background-position 0.5s;
   border: 1px solid #F1F6F9;
- 
+
 }
 .tabs li.activeTab,
 .tabs li:hover {
   box-shadow: 0px 0px 0px 0px rgba(57, 72, 103,0.85);
   background-position: right;
-   color: white; 
+   color: white;
 }
 /*
 .clothesTab li {

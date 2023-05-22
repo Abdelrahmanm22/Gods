@@ -3,11 +3,11 @@
 
 <head>
     <title>Egyptian Gods | Reservation</title>
-    <link rel="stylesheet" href="headerr.css">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/headerr.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Logo.png">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="bookup.css">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/bookup.css')}}">
     <script src="https://kit.fontawesome.com/0c6829628d.js" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UV-Compatible" content="IE=edge">
@@ -104,34 +104,20 @@
                     <form>
                         <label for="name" id="name">User Name</label>
                         <input placeholder="User Name" type="text" id="name" name="name">
-
                         <label for="country" id="country">Your Country</label>
                         <input placeholder="Your Country" type="text" id="country" name="country">
-
                         <label for="email">E-mail</label>
                         <input placeholder="E-mail" type="text" id="email" name="email">
-
                         <label for="phone">Phone</label>
                         <input placeholder="Phone" type="text" id="phone" name="phone">
-
-
-
-
                         <label for="address">Address</label>
                         <input placeholder="Address" type="text" id="address" name="address">
-
-
                         <label for="Date of visit">Date of visit</label>
                         <input type="datetime-local" id="Date of visit" name="Date of visit">
-
                         <label for="number">Number of members</label>
                         <input type="number" id="number" name="number" placeholder="member">
-
                         <label for="number">Number of children</label>
                         <input type="number" id="number" name="number" placeholder="children">
-
-
-
                         <label for="god">Choose god you want visit</label>
                         <select id="god" name="god">
                             <option value="">Choose God</option>
@@ -146,9 +132,7 @@
                             <option value="oser">Nut</option>
                             <option value="oser">Geb</option>
                             <option value="oser">Anubis</option>
-
                         </select>
-
                         <label for="tourism">Tourism</label>
                         <select id="tourism" name="tourism">
                             <option value="">Choose Tourism</option>
@@ -158,8 +142,6 @@
                             <option value="cana">Gest Egypt Tours</option>
                             <option value="usa">Galaxia Tours</option>
                         </select>
-
-
                         <label for="veh">Choose type of vehicle</label>
                         <select id="veh" name="veh">
                             <div class="h">
@@ -170,20 +152,13 @@
                                 <option value="train">Train</option>
                             </div>
                         </select>
-
-
-
                         <label for="text"> Note</label>
                         <textarea name="message" rows="4" cols="30">Your Note...
-            </textarea>
-
+                         </textarea>
                         <label>Total Cost = 0 Eg</label>
-
-
                         <input class="submit" value="Book Up" type="submit">
                     </form>
                 </div>
-
             </div>
 
 
@@ -194,9 +169,9 @@
     </div>
     <br>
     <br>
-<?php 
-include "footer.php"
-?>  
+    <?php
+    include "footer.php"
+    ?>
 </body>
 
 </html>

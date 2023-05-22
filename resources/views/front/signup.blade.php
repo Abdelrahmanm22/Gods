@@ -8,17 +8,17 @@
     <link rel="icon" type="image/x-icon" href="Logo.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="headerr.css">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/signup.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/headerr.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 </head>
 
 <body >
-<nav class="navbar navbar-expand-sm  sticky-top" style="width: 100%;"> 
-  
+<nav class="navbar navbar-expand-sm  sticky-top" style="width: 100%;">
+
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php" style="color: #9BA4B5" id="back">Egyptian Gods</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">

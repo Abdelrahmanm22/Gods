@@ -2,19 +2,15 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Egyptian Gods | Sign In</title>
-    <link rel="icon" type="image/x-icon" href="Logo.png">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="signinblack.css">
-    <link rel="stylesheet" href="headerrblack.css">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/viddark.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/headerrblack.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+    <title>Egyptian Gods | Video Gallery</title>
 </head>
 
-<body style="background-color: rgb(22,22,22);">
+<body style="background-color: rgb(22, 22, 22);">
     <!-- Navigation bar -->
 
     <nav class="navbar navbar-expand-sm  sticky-top">
@@ -91,40 +87,25 @@
             </div>
         </div>
 
-        <div class="stroke"><a href="signin.php"><i class="fa-solid fa-circle-half-stroke"></i></a></div>
+        <div class="stroke"><a href="video.php"><i class="fa-solid fa-circle-half-stroke"></i></a></div>
 
     </nav>
 
     <!-- End of Navigation bar -->
 
-    <div class="containsignin">
-        <div class="signin">
-            <p class="txtsignin1">Welcome back</p>
-            <p class="txtsignin2">To keep connected with us please login with your personal information</p>
-            <form action="#" method="post">
-                <label>Email</label>
-                <br>
-                <input type="email" name="email" id="email">
-                <br>
-                <label>Password</label>
-                <br>
-                <input type="password" name="password" id="password">
-                <br>
-                <input type="checkbox" id="remember" name="remember" value="remember">
-                <label for="remember" id="remember1">Remember me</label><span class="forgot"><a href="#">Forgot password ?</a></span>
-                <input type="submit" id="submit" value="Sign In">
-            </form>
-            <p class="account">Don't have an account ? <a href="signup.php" style="text-decoration:none;color:#cf7500"> Sign Up </a> </p>
-        </div>
-        <div class="containtextt">
-            <p class="txtsignin1"> Create an account</p>
-            <p class="txtsignin2">Connect with us by creating an account</p>
-            <button><a href="signupblack.php" style="text-decoration: none;color:white;font-weight:bold">Sign Up</a></button>
-        </div>
+    <center>
+        <h1 class="hh">Few videos for more fun</h1>
+    </center>
+    <div class="video">
+        <iframe class="v1" src="https://www.youtube.com/embed/a6L3jwqHrag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="v2" src="https://www.youtube.com/embed/o2XvrhprPwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="v3" src="https://www.youtube.com/embed/Uq0vGHyu0DU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="v4" src="https://www.youtube.com/embed/hO1tzmi1V5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="v5" src="https://www.youtube.com/embed/PTJBsFVVpWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="v6" src="https://www.youtube.com/embed/sCmP-y2_jNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
     </div>
-
-
-    <?php include "footerblack.php"; ?>
+    <?php include "footerblack.php" ?>
 </body>
 
 </html>

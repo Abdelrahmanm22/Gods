@@ -30,5 +30,10 @@ Route::group(['namespace'=>'Front'],function(){
 });
 
 
+Route::group(['namespace'=>'Front'],function(){
+
+    Route::get('/home', [profileController::class, 'profile']);
+
+});
 
 
