@@ -17,7 +17,7 @@ use App\Http\Controllers\Front\HomeController;
 
 Route::get('/',function(){return view('front.index1');});
 Route::get('/',function(){return view('front.index');});
-Route::get('/',function(){return view('front.index');});
+// Route::get('/',function(){return view('front.index');});
 
 
 
@@ -26,7 +26,7 @@ Route::get('/',function(){return view('front.index');});
 Route::group(['namespace'=>'Front'],function(){
     // echo "hss";die;
     Route::get('/home', [HomeController::class, 'index']);
-    
+
 });
 
 
