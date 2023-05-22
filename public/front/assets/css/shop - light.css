@@ -1,0 +1,424 @@
+/* global styling start*/
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+:root {
+  --dark-background: #1f1f1f;
+  --font-color: rgba(255, 255, 255, 0.85);
+  --paragraph-color: rgba(255, 255, 255, 0.65);
+  --orange-btn:#cf7500;
+  --btn-hover:#803503;
+
+  --light-background: #F1F6F9;
+  --light-font-color: #212A3E;
+  --light-paragraph-color: #394867;
+  --light-orange-btn:#9BA4B5;
+  --light-btn-hover:#787e8b;
+  
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  background-color: var(--light-background);
+  font-family: "Cairo Play", cursive;
+  color: var(--light-font-color);
+  background-image: url(../img/backgroundlolo.jpg);
+  /* background-image: linear-gradient(rgba(240, 240, 240,0.), rgba(240, 240, 240,0.5)),url(../img/backgroundlolo.jpg);  */
+  background-image: linear-gradient(rgba(241, 246, 249,0.4), rgba(241, 246, 249,0.4)),url(../img/backgroundlolo.jpg); 
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--light-background);
+  transition: 0.4s;
+}
+::-webkit-scrollbar-button {
+  background-color: var(--light-background);
+}
+::-webkit-scrollbar-thumb {
+  background-color:var(--light-orange-btn);
+}
+/* global styling end */
+
+/*tabs style start*/
+main {
+  padding: 100px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.leftContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+
+.welcomeStatments h1 {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: var(--light-orange-btn);
+  font-size: 28px;
+}
+.welcomeStatments p {
+  font-size: 23px;
+  margin-top: 10px;
+  color: var(--light-orange-btn);
+  opacity: 0.8;
+}
+.welcomeStatments {
+  padding: 20px 30px;
+  width: 75%;
+  margin: auto;
+  background-image: linear-gradient(45deg, #394867,  #212A3E,#9BA4B5);
+  border-radius: 20px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clothesTab {
+  display: flex !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex-direction: column !important;
+}
+
+.clothesTab li {
+  cursor: pointer !important;
+  width: 200px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0px 2px 5px 3px  rgba(57, 72, 103,0.85) !important;
+  color: var(--light-font-color) !important;
+  font-size: 16px;
+  border-radius: 25px !important;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, transparent 50%,#394867 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+  margin: 10px auto !important;
+   /* background-color: var(--light-btn-hover) !important;  */
+}
+.clothesTab li.activeclothTab,
+.clothesTab li:hover {
+  box-shadow: 0px 0px 0px 0px  rgba(57, 72, 103,0.85) !important;
+  background-position: right;
+  color: white !important;
+}
+
+/*
+.eg-btn{
+
+  padding: 12px 22px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  border: 2px solid #394867;
+  
+ 
+}
+.eg-btn:hover{
+  background-position: right;
+  color: var(--light-font-color);
+}
+*/
+/*tabs style end*/
+
+/* start shop code */
+
+.tabImg > div:not(:first-child) {
+  display: none;
+}
+.tabImg {
+  width: 80%;
+}
+.tabImg > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Card {
+  width: 320px;
+  box-shadow: 1px -1px 11px 3px  rgba(57, 72, 103,0.85); 
+}
+.Card img {
+  max-width: 100%;
+  filter: brightness(80%);
+}
+/* .cardInfo{
+  border: 1px solid wheat;
+} */
+.Card {
+  border-radius: 20px;
+  background-color: var(--light-background);
+}
+.tabImg > div img {
+  border-radius: 20px;
+}
+.eg-btn {
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  background-color: var(--light-btn-hover);
+  color: var(--light-font-color);
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+/* .eg-btn:hover {
+  color: whitesmoke;
+  background: linear-gradient(to right, transparent 100%, #394867 50%);
+  box-shadow: 0px 0px 0px 0px  rgba(57, 72, 103,0.85);
+  /* background-color: var(--light-btn-hover); */
+.eg-btn{
+  color:var(--light-font-color);
+  font-size: 13px;
+  padding: 12px 22px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  letter-spacing: 1px;
+  border: 2px solid #394867;
+  border-radius: 25px;
+  background: linear-gradient(to right, transparent 50%,#394867 50%);
+background-size: 200%;
+background-position: left;
+transition: background-position 0.5s;
+}
+.eg-btn:hover{
+  background-position: right;
+  color: var(--light-font-color);
+}
+
+ 
+.cardInfo {
+  padding: 15px;
+  color: var(--light-font-color);
+}
+.Card h1 {
+  font-size: 18px;
+}
+.Card h2 {
+  font-size: 18px;
+}
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+/* alaa css */
+
+.navbar-brand {
+  color:var(--light-orange-btn);
+  /* font-size: 40px; */
+  margin-left: 2%;
+}
+.collapse {
+  margin-left: 20px;
+}
+.nav-item a {
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 8px;
+}
+
+.menu img {
+  width: 50px;
+}
+.menu {
+  width: 200px;
+  background-color: var(--light-background);
+  box-shadow: 0 4px 8px 0 rgba(227, 134, 12, 0.416),
+    0 6px 20px 0 rgba(243, 159, 3, 0.393);
+}
+
+.menu a {
+  width: 70%;
+  float: right;
+  margin-top: -45px;
+}
+.menu a:hover {
+  background-color: none;
+  color: var(--light-font-color);
+}
+
+.menu22 {
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(227, 134, 12, 0.416),
+    0 6px 20px 0 rgba(243, 159, 3, 0.393);
+}
+.menu22 a {
+  width: 70%;
+}
+/* footer */
+footer {
+  overflow: hidden;
+  background-color: var(--light-background);
+}
+
+button {
+  color: var(--light-font-color);
+  font-size: 13px;
+  padding: 12px 22px;
+  margin: 20px;
+  letter-spacing: 1px;
+  border: 2px solid var(--light-orange-btn);
+  border-radius: 25px;
+  background: linear-gradient(to right, transparent 50%, goldenrod 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+}
+button:hover {
+  background-position: right;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.row h2 {
+  font-size: 22px;
+}
+.row {
+  width: 100%;
+}
+.row a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: grey;
+  font-size: 18px;
+}
+
+.row a:hover {
+  font-size: 22px;
+  color: goldenrod;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding-left: 70px;
+  color: goldenrod;
+  margin-top: 5%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 2%;
+}
+.icons i {
+  font-size: 20px;
+  padding: 15px;
+  color:var(--btn-hover);
+}
+.icons i:hover {
+  color: white;
+  background-color: var(--light-background);
+  border-radius: 50%;
+}
+.copyright {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+.historical {
+  padding-left: 70px;
+}
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    text-align: center;
+    margin-left: -28px;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    padding: 100px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .welcomeStatments h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .welcomeStatments {
+    width: 90%;
+
+    margin-top: 110px !important;
+  }
+  .clothingTab {
+    margin-bottom: 25px;
+  }
+  .welcomeStatments p {
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .leftContent {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Card {
+    width: 300px;
+  }
+  .eg-btn {
+    font-size: 10px;
+  }
+  .cardInfo {
+    padding: 10px;
+  }
+  .Card h1 {
+    font-size: 17px;
+  }
+  .Card h2 {
+    font-size: 17px;
+  }
+  .tabImg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .leftContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

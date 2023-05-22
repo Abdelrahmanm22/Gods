@@ -1,0 +1,167 @@
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.containtextt{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.textt1{
+    padding-top: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #394867;
+
+}
+.textt2{
+    font-size: 17px;
+    font-weight: bold;
+    color: #9BA4B5;
+}
+.containsignup{
+width: 900px;
+height: 650px;
+margin-top: 1%;
+margin-left: 300px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0,0,0,0.10)),url(images/Heroooo.png);}
+
+.signup{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    margin-top: -50.54%;
+    padding-top: 5%;
+    margin-left: 50%;
+    
+}
+
+.txtsignup1{
+    color: #394867;
+    font-size: 30px;
+    margin-left: 80px;
+}
+
+.txtsignup2{
+    color: #9BA4B5;
+    padding: 8px;
+    margin-left: 70px;
+}
+
+#email , #password ,#Cpassword{
+    margin-left: 17%;
+    padding-left: 30px;
+    width: 320px;
+    border-radius: 10px;
+    height: 40px;
+    border:none;
+    background-color: whitesmoke;
+}
+
+label{
+    margin-left: 80px;
+    padding: 8px;
+    color: #212A3E;
+}
+
+#submit{
+    color: #394867;
+    font-size: 13px;
+    padding: 12px 22px;
+    margin: 20px;
+    letter-spacing: 1px;
+    border: 2px solid #394867;
+    width: 70%;
+    font-weight: bold;
+    margin-left: 80px;
+    border-radius: 25px;
+    background: linear-gradient(to right, transparent 50%,#394867 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+}
+#submit:hover{
+    background-position: right;
+    color: white;
+}
+#submit:active{
+transform: scale(0.90);}
+.account{
+    margin-left: 85px;
+    margin-top: 5%;
+    color: #394867;
+}
+
+.signup a{
+    text-decoration: none;
+    color: #9BA4B5;
+    margin-left: 2%;
+}
+
+.signimagetxt{
+    float: right;
+    display: grid;
+    width: 50%;
+}
+input:focus{
+    outline: 2px solid #9BA4B5;
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    .containsignup{
+        width: 325px;
+        height: 600px;
+        margin-left: 0px;
+    }
+    #email , #password,#submit ,#Cpassword{
+        width: 180px;
+        margin-left: 70px;
+    }
+
+   .textt1{
+    font-size: 30px;
+   }
+   .textt2{
+    font-size: 15px;
+   }
+    .signup{
+        padding-top: 204%;
+        background: none;
+        text-align: center;
+        margin-left: -15%;
+        width: 100%;
+    }
+
+.containtextt{
+    margin-top: 50%;
+    float: left;
+    width: 100%;
+    margin-left: -1px;
+}
+.txtsignup1{
+font-size: 20px;
+font-weight: bold;
+}
+
+.txtsignin2{
+    font-size: 15px;
+}
+.account{
+    margin-left: 65px;
+}
+footer{
+    margin-top: 190%;
+
+}
+.ic{
+    display: none;
+}
+  }
+
+
+

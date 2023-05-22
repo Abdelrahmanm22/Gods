@@ -1,0 +1,181 @@
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.containtextt{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: -50%;
+    
+}
+.textt1{
+    padding-top: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(176, 127, 2);
+
+}
+.textt2{
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(70, 69, 69);
+}
+.containsignin{
+width: 900px;
+height: 650px;
+margin-top: 1%;
+margin-left: 300px;
+margin-bottom: 2%;
+background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0,0,0,0.10)),url(images/Heroooo.png);}
+
+.signin{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    padding-top: 5%;
+   
+    
+}
+
+.txtsignin1{
+    color: #394867;
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.txtsignin2{
+    color: #9BA4B5;
+    padding: 8px;
+    font-weight: bold;
+}
+
+#email , #password {
+    margin-left: 2%;
+    padding-left: 30px;
+    width: 320px;
+    border-radius: 10px;
+    height: 40px;
+    border:none;
+    background-color: whitesmoke;
+}
+
+label{
+    margin-left: 5px;
+    padding: 8px;
+}
+#remember{
+    margin-left: 15px;
+    margin-top: 4%;
+}
+#remember1{
+    margin-left: -6px;
+}
+
+.forgot a{
+    text-decoration: none;
+    color: #9BA4B5;
+    margin-left: 62px;
+}
+#submit{
+    color: #394867;
+    font-size: 13px;
+    padding: 12px 22px;
+    margin: 20px;
+    letter-spacing: 1px;
+    border: 2px solid #394867;
+    width: 70%;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 25px;
+    background: linear-gradient(to right, transparent 50%,#394867 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+}
+#submit:hover{
+    background-position: right;
+    color: white;
+}
+#submit:active{
+transform: scale(0.90);}
+.account{
+    margin-left: 70px;
+    margin-top: 5%;
+    color: gray;
+}
+
+.signup a{
+    text-decoration: none;
+    color: #9BA4B5;
+    margin-left: 2%;
+}
+
+.signimagetxt{
+    float: right;
+    display: grid;
+    width: 50%;
+}
+input:focus{
+    outline: 2px solid #9BA4B5;
+
+}
+
+
+
+/*Media Query*/
+
+
+@media screen and (max-width: 500px) {
+    
+    .containsignin{
+        width: 330px;
+        height: 400px;
+        margin-left: 0px;
+    }
+    #email , #password,#submit{
+        width: 180px;
+        margin-left: -5%;
+    }
+
+    .forgot a{
+       
+        margin-left: 20px;
+    }
+
+    .signin{
+        padding-top: 130%;
+        background: none;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+.containtextt{
+    float: left;
+    margin-top: -100%;
+    width: 100%;
+    margin-left: -1px;
+}
+.txtsignin1{
+font-size: 22px;
+}
+.txtsignin2{
+    font-size: 15px;
+}
+.account{
+    margin-left: 5px;
+}
+footer{
+    margin-top: 190%;
+}
+.ic{
+    display: none;
+}
+  }
+
+
+  

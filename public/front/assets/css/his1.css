@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+@media(max-width: 767px){
+    .b1{
+        margin-right: 50px;
+    }
+}
+body{
+    Font-family: "Cairo Play", cursive;
+    background-color: rgba(87, 71, 71, 0.034);
+}
+.txt1 {
+    width: 75%;
+    margin: 50px auto;
+    text-align: justify;
+    color: #212a3e;
+}
+.txt2 {
+    width: 75%;
+    margin-bottom: 0 !important;
+    margin: 50px auto;
+    text-align: justify;
+    color: #212a3e;
+}
+    .txt3 {
+        width: 75%; 
+        margin-bottom: 0 !important;
+        margin: 50px auto; 
+        text-align: justify;
+        color: #212a3e;
+    }
+     .hh{
+        color: #394867;
+       
+      
+       width: 75%;
+    margin: 50px auto;
+    text-align: justify;
+
+     }
+     .hh1{
+        color: #394867;
+        text-shadow: 2px 2px #212a3e;
+ 
+      }
+    
+    #check{
+        display: none;
+    }
+    #check:checked ~ .dis{
+        display: block;
+    }
+    .dis{
+        display: none;
+        transition: 0.5s linear;
+        
+    }
+    label{
+        display: inline-block;
+        cursor: pointer;
+        text-decoration:underline ;
+        color: rgb(0, 0, 62);
+    }
+    .img1{
+float: right;
+margin-left: 150px;
+margin-right: 100px;
+width: 140px;
+    }
+    .img1:hover{
+        width: 200px;
+    }
+    
+ .sec1{
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 54px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #212a3e;
+    box-shadow: 10px 10px 10px 10px #9ba4b5;
+    background-color: rgba(87, 71, 71, 0.027);
+    text-align: justify;
+
+ }
+ 
+
+ .img4{
+    float: right;
+    margin-left: 150px;
+    margin-right: 100px;
+    margin-top: 50px;
+    width: 150px;
+   
+  
+}
+.img4:hover{
+    width: 200px;
+}
+.sec4{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #212a3e;
+    box-shadow: 10px 10px 10px 10px #9ba4b5;
+    text-align: justify;
+    background-color: rgba(87, 71, 71, 0.027);
+  
+ }
+ .img5{
+    float: right;
+    margin-left: 150px;
+    margin-right: 100px;
+    margin-top: 50px;
+    width: 150px;
+  
+}
+.img5:hover{
+    width: 200px;
+}
+.sec5{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #212a3e;
+    box-shadow: 10px 10px 10px 10px #9ba4b5;
+    text-align: justify;
+    background-color: rgba(87, 71, 71, 0.027);
+ }
+ .img6{
+    float: right;
+    margin-left: 150px;
+    margin-right: 100px;
+    margin-top: 30px;
+    width: 150px;
+    height: 350px;
+   
+}
+.img6:hover{
+    width: 230px;
+}
+.sec6{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    padding-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #212a3e;
+    box-shadow: 10px 10px 10px 10px #9ba4b5;
+    text-align: justify;
+    background-color: rgba(87, 71, 71, 0.027);
+ }
+ #check3{
+    display: none;
+}
+#check3:checked ~ .dis3{
+    display: block;
+}
+.dis3{
+    display: none;
+    transition: 0.5s linear;
+}
+.img7{
+    float: right;
+    margin-left: 150px;
+    margin-right: 100px;
+    margin-top: 30px;
+    width: 150px;
+
+}
+.img7:hover{
+    width: 200px;
+}
+.sec7{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    padding-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #212a3e;
+    box-shadow: 10px 10px 10px 10px #9ba4b5;
+   text-align: justify;
+   background-color: rgba(87, 71, 71, 0.027);
+ }
+ #check7{
+    display: none;
+}
+#check7:checked ~ .dis7{
+    display: block;
+}
+.dis7{
+    display: none;
+    transition: 0.5s linear;
+}
+.b1{
+    color:white;
+    font-size: 13px;
+    padding: 12px 22px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    letter-spacing: 1px;
+    border: 2px solid whitesmoke;
+    border-radius: 25px;
+    background: linear-gradient(to right, transparent 50%,#394867 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+  }
+b1:hover{
+    background-position: right;
+    color: white;
+  }
+
+    
+}
+
+

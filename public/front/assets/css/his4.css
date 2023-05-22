@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+@media(max-width: 767px){
+    body{
+        color: chartreuse;
+    }
+}
+body{
+    Font-family: "Cairo Play", cursive;
+    background-color: rgba(87, 71, 71, 0.034);
+}
+.hh{
+    margin-bottom: 100px;
+    color: #394867;
+    text-shadow: 2px 2px #212a3e;
+
+ }
+
+
+.img1{
+float: right;
+margin-left: 50px;
+width: 300px;
+}
+.img1:hover{
+    width: 400px;
+}
+
+.sec1{
+border-radius: 10px;
+padding-left: 40px;
+padding-right: 40px;
+padding-bottom: 54px;
+padding-top: 50px;
+margin-bottom: 50px;
+color: #212a3e;
+box-shadow: 10px 10px 10px 10px #9ba4b5;
+background-color: rgba(87, 71, 71, 0.027);
+text-align: justify;
+margin-left: 25px;
+margin-right: 25px;
+
+}
+.img2{
+    float: right;
+    margin-left: 50px;
+    width: 300px;
+    }
+    .img2:hover{
+        width: 400px;
+    }
+    
+    .sec2{
+        
+    border-radius: 10px;
+  padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 54px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #212a3e;
+    box-shadow: 10px 10px 10px 10px #9ba4b5;
+    background-color: rgba(87, 71, 71, 0.027);
+    text-align: justify;
+    margin-left: 25px;
+margin-right: 25px;
+    }
+    .img3{
+        float: right;
+        margin-left: 50px;
+        width: 300px;
+        }
+        .img3:hover{
+            width: 400px;
+        }
+        
+        .sec3{
+            
+        border-radius: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 54px;
+        padding-top: 50px;
+        margin-bottom: 50px;
+        color: #212a3e;
+        box-shadow: 10px 10px 10px 10px #9ba4b5;
+        background-color: rgba(87, 71, 71, 0.027);
+        text-align: justify;
+        margin-left: 25px;
+        margin-right: 25px;
+        }
+        .img4{
+            float: right;
+            margin-left: 50px;
+            width: 300px;
+            }
+            .img4:hover{
+                width: 400px;
+            }
+            
+            .sec4{
+          border-radius: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 54px;
+            padding-top: 50px;
+            margin-bottom: 50px;
+            color: #212a3e;
+            box-shadow: 10px 10px 10px 10px #9ba4b5;
+            background-color: rgba(87, 71, 71, 0.027);
+            text-align: justify;
+            margin-left: 25px;
+margin-right: 25px;
+            }
+            .img5{
+                float: right;
+                margin-left: 50px;
+                width: 300px;
+                }
+                .img5:hover{
+                    width: 400px;
+                }
+                
+                .sec5{
+                    
+                border-radius: 10px;
+                  padding-left: 40px;
+                padding-right: 40px;
+                padding-bottom: 54px;
+                padding-top: 50px;
+                margin-bottom: 50px;
+                color: #212a3e;
+                   box-shadow: 10px 10px 10px 10px #9ba4b5;
+                   background-color: rgba(87, 71, 71, 0.027);
+                text-align: justify;
+                margin-left: 25px;
+                margin-right: 25px;
+                }
+                .img6{
+                    float: right;
+                    margin-left: 50px;
+                    width: 300px;
+                    }
+                    .img6:hover{
+                        width: 400px;
+                    }
+                    .sec6{
+                        
+                    border-radius: 10px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 54px;
+                    padding-top: 50px;
+                    margin-bottom: 50px;
+                    color: #212a3e;
+                    box-shadow: 10px 10px 10px 10px #9ba4b5;
+                    background-color: rgba(87, 71, 71, 0.027);
+                    text-align: justify;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    }
+                    .b1{
+                        color:white;
+                        font-size: 13px;
+                        padding: 12px 22px;
+                        margin-bottom: 20px;
+                        margin-left: 50px;
+                        letter-spacing: 1px;
+                        border: 2px solid whitesmoke;
+                        border-radius: 25px;
+                        background: linear-gradient(to right, transparent 50%,#394867 50%);
+                      background-size: 200%;
+                      background-position: left;
+                      transition: background-position 0.5s;
+                      }
+                    b1:hover{
+                        background-position: right;
+                        color: white;
+                      }

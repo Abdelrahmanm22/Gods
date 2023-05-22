@@ -1,0 +1,725 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+*{
+    font-family: "cairo Play",cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid a{
+    color: #F1F6F9;
+    
+
+}
+.navbar-brand{
+    font-size: 40px;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+.collapse{
+    margin-left: 20px;
+}
+.nav-item a{
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+.menu img{
+    width: 50px;
+}
+.menu {
+    width: 200px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px 0 rgba(227, 134, 12, 0.416), 0 6px 20px 0 rgba(243, 159, 3, 0.393);
+}
+
+.menu a{
+    width:70%;
+    float: right;
+    color: #212A3E;
+    margin-top: -45px;
+}
+.menu a:hover{
+    background-color: none;
+    color: #9BA4B5;
+}
+
+.menu22 {
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(227, 134, 12, 0.416), 0 6px 20px 0 rgba(243, 159, 3, 0.393);
+
+}
+.menu22 a{
+width: 70%;
+color: #212A3E;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-brand{
+        font-size: 30px;
+    }
+
+
+}
+
+
+.imagecontainer{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 730px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+  text-align: center;
+  margin-top: 10%;
+}
+.content p{
+
+font-size:18px ;
+color: gray;
+padding-left: 150px;
+padding-right: 150px;
+padding-top: 15px;
+padding-bottom: 25px;
+margin: 1%;
+letter-spacing: 1px;
+
+
+}
+.title{
+  font-size: 70px;
+  line-height: 100px;
+  font-weight: bold;
+  color: #cf7500;
+  height: 100px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.word{
+  color: gray;
+  margin-left: 12px;
+  box-sizing: border-box;
+  animation: word 6s linear infinite;
+}
+@keyframes word {
+  0%{margin-top: -200px;}
+  30%{margin-top: -200px;}
+  35%{margin-top: 0px;}
+  65%{margin-top: 0px;}
+  70%{margin-top: 200px;}
+  100%{margin-top: 200px;}
+
+  
+}
+
+.content button{
+  color: whitesmoke;
+  font-size: 16px;
+  padding: 15px 25px;
+  margin: 20px;
+  letter-spacing: 1px;
+  border: 2px solid #cf7500;
+  border-radius: 25px;
+  background: linear-gradient(to right, transparent 50%,#cf7500 50%);
+background-size: 200%;
+background-position: left;
+transition: background-position 0.5s;
+}
+.content button:hover{
+  background-position: right;
+}
+
+/* We offer the best trips*/
+.temple{
+width: 15%;
+height: 22%;
+}
+
+.triptext{
+    color: #cf7500;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.tripstext2{
+color: gray;
+font-size: 15px;
+font-weight: bold;
+letter-spacing: 1px;
+text-align: center;
+padding-left: 150px;
+padding-right: 150px;
+margin-left: 26%;
+margin-top: 1%;
+margin-right: 26%;
+}
+.tripimage{
+    margin-left: 20%;
+    margin-top: 0%;
+}
+
+.trip{padding-left: 4.5%;padding-top: 1%;}
+
+.tripimage2{
+  float: right;
+  margin-right: 19%;
+  margin-top:-15%;
+}
+.tripimage2 img{width: 33%}
+.trip2{padding-left: 10%;padding-top: 2%;}
+
+
+.tripimage3{
+    float: right;
+margin-top: -390px;
+margin-left: 65%;
+margin-right: 18%;
+
+}
+
+.tripimage3 img{width: 200px;height: 290px;}
+
+.trip3{padding-left: 30%;padding-top: 4%;}
+.tripcontainer img:hover{
+  opacity: 0.6;
+}
+/* END  */
+
+
+/* Video */
+video{
+    width: 600px;
+    height: 500px;
+    float:right;
+}
+.videoo{
+    margin-top:-5%;
+
+}
+button{
+    color: white;
+    font-size: 16px;
+    padding: 15px 25px;
+    margin: 20px;
+    letter-spacing: 1px;
+    border: 2px solid #cf7500;
+    border-radius: 25px;
+    background: linear-gradient(to right, transparent 50%,#cf7500 50%);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+  }
+button:hover{
+    background-position: right;
+    color: #000;
+  }
+
+.textvideo{
+    margin-top: 15%;
+}
+
+.text1{
+    color:#cf7500;
+    font-size: 40px;
+    margin-left: 7%;
+}  
+
+.text2{
+    color: gray;
+    margin-left: 7%;
+    margin-top: 2%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: justify;
+
+}
+
+.read{
+    margin-left: 7%;
+    margin-top: 2%;
+    padding-left: 3%;
+}
+
+/* End of Video */
+
+
+
+
+/*Gallery*/
+.pgallery{
+  color: #cf7500;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 3%;
+  padding-top: 2%;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 280px;
+  margin-left: 170px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+
+}
+div.gallery img:hover{
+  transform: scale(1,1.5);
+  transform: rotate(2deg);
+}
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.gallery1 {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 280px;
+  margin-left: 170px;
+
+}
+div.gallery1 img:hover{
+  transform: scale(1,1.5);
+  transform: rotate(2deg);
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery1 img {
+  width: 100%;
+  height: 220px;
+}
+.backgal{
+  height: 720px;
+}
+
+/*End of gallery*/
+
+
+
+/*Sign in*/
+.sign1{
+  color:#cf7500;
+  font-weight: bold;
+  margin-top:180px;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.sign2{
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.signbtn{
+text-align: center;}
+/*End of sign in*/
+
+
+
+
+/*Online shop*/
+
+.shopcontainer{
+position: relative;
+background-color: #e1850e;
+width: 750px;
+height: 300px;
+margin-left: 450px;
+margin-top: 6%;
+
+}
+.pic1 img{
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+  position: absolute;
+  margin-top: 12%;
+  margin-left: -18%;
+}
+
+.pic2 img{
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  position: absolute;
+  margin-left: 18%;
+  margin-top: 14%;
+}
+
+.pic3 img{
+  width: 220px;
+  height: 220px;
+  z-index: 3;
+  position: absolute;
+  margin-left: 9%;
+  margin-top: -14%;
+}
+.shoptext{
+  float: right;
+}
+
+.texttt1{
+  color: gray;
+  float: right;
+  font-size: 25px;
+  margin-top: 4%;
+  margin-right: 35%;
+  font-weight: bold;
+}
+
+.texttt2{
+float: right;
+font-size: 18px;
+color: white;
+margin-top: 1%;
+margin-left: 48%;
+letter-spacing: 1px;
+padding-right: 2%;
+text-align: justify;
+}
+
+.shopbtn{
+  float: right;
+  margin-right: 37%;
+}
+
+.backsign{
+  height: 250px;
+}
+/*End of shop*/
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+  .title{
+    font-size: 25px;
+    width: 500px;
+    margin-left: -30%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .word{
+    overflow: hidden;
+  }
+
+  @keyframes word {
+    0%{margin-top: -200px;}
+    30%{margin-top: -200px;}
+    35%{margin-top: 0px;}
+    65%{margin-top: 0px;}
+    70%{margin-top: 200px;}
+    100%{margin-top: 200px;}
+  
+    
+  }
+
+  .content p{
+    padding-left: 10px;
+    margin-top: -20%;
+    width: 430px;
+  }
+  .content button{
+    margin-left: 1%;
+  }
+
+
+  .triptext{
+  font-size: 25px;
+  margin-left: -3%;
+  
+  }
+  .tripimage{
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.trip{padding-left: 23%;padding-top: 1%;}
+
+.tripimage2{
+  float: right;
+  margin-right: 16%;
+  margin-top:-8%;
+  width: 80%;
+}
+.tripimage2 img{width: 33%;margin-top: 20%;margin-left: 20%;}
+.trip2{padding-left: 40%;padding-top: 2%;}
+
+
+.tripimage3{
+    float: right;
+margin-top: 10%;
+width: 80%;
+
+margin-right: 0%;
+
+}
+
+.tripimage3 img{width: 200px;height: 290px;}
+
+.trip3{padding-left: 25%;padding-top: 4%;}
+
+  .tripstext2{
+    padding-left: 0%;
+    margin-left: 10%;
+    width: 400px;
+  }
+  
+.tripcontainer img{
+  width: 70%;
+  height: 50%;
+}
+div.gallery{
+  margin-left: 28px;
+  width: 250px;
+
+}
+
+div.gallery1{
+  margin-left: 28px;
+  width: 250px;
+
+}
+
+video{
+margin-right: 8%;
+width: 300px;
+}
+
+.text1{
+  font-size: 30px;
+  margin-left: 3%;
+}
+.text2{
+  margin-left: 3%;
+  padding-right: 12%;
+}
+.sign1{
+  margin-top: 5%;
+  padding-top: 2%;
+  font-size: 30px;
+  margin-right: 3%;
+}
+
+.sign2{
+  font-size: 18px;
+  padding-right: 10%;
+  padding-left: 5%;
+}
+.shopcontainer{
+  position: relative;
+  background-color: #394867;
+  width: 100%;
+  height: 600px;
+  margin-left: 0px;
+  margin-top: 30%;
+  margin-bottom: -15%;
+  
+  }
+  .pic1 img{
+    width: 230px;
+    height: 230px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 12%;
+    margin-left: -30%;
+  }
+  
+  .pic2 img{
+    width: 180px;
+    height: 180px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 14%;
+  }
+  
+  .pic3 img{
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+    position: absolute;
+    margin-left: 9%;
+    margin-top: -30%;
+  }
+  .shoptext{
+    float: right;
+  }
+  
+  .texttt1{
+    color: #9BA4B5;
+    float: right;
+    font-size: 25px;
+    margin-top: 90%;
+    margin-right: 55%;
+    font-weight: bold;
+  }
+  
+  .texttt2{
+  float: right;
+  font-size: 18px;
+  color: white;
+  margin-top: 1%;
+  margin-right: 12%;
+  width: 80%;
+  letter-spacing: 1px;
+  padding-right: 2%;
+  text-align: justify;
+  }
+  
+  .shopbtn{
+    float: right;
+    margin-right: 33%;
+  }
+
+  .backsign{
+    height: 300px;
+  }
+  .backgal{
+    height: 1500px;
+    margin-top: 150%;
+  }
+  .read{
+
+    padding-left: 10%;
+}
+.ic{display: none;}
+}
