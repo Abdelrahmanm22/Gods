@@ -1,16 +1,16 @@
-<?php
 
 namespace App\Http\Controllers\Front;
+<?php
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-class HomeController extends Controller
+
+class ProfileLight extends Controller
 {
     //
 
-    public function index(){
-        return view('front.index');
+    public function plight(){
+        return view('front.plight');
     }
 }
-
-
+?>

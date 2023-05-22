@@ -13,7 +13,7 @@
   --light-paragraph-color: #394867;
   --light-orange-btn:#9BA4B5;
   --light-btn-hover:#9199a8;
-  
+
 }
 
 * {
@@ -25,9 +25,9 @@ body {
   background-color: var(--dark-background);
   font-family: "Cairo Play", cursive;
   color: var(--font-color);
-  background-image: url(../img/backgroundlolo.jpg);
-  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../img/backgroundlolo.jpg);
-  
+  background-image: url(../front/assets/img/product/backgroundlolo.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../front/assets/img/product/backgroundlolo.jpg);
+
   /* background-size: contain; */
   /* background-repeat: no-r; */
 }
@@ -103,7 +103,7 @@ main {
   color: var(--font-color);
   font-size: 16px;
   border-radius: 25px;
-  
+
 margin-bottom: 3px;
  letter-spacing: 1px;
  background: linear-gradient(to right, transparent 50%, #cf7500 50%);
@@ -128,7 +128,7 @@ margin-bottom: 3px;
 }
 .tabImg {
   width: 80%;
- 
+
 }
 .tabImg > div {
   display: flex;
@@ -140,7 +140,7 @@ margin-bottom: 3px;
 
 .Card {
   width: 320px;
-  box-shadow: 1px -1px 11px 3px rgba(0,0,0, 0.65); 
+  box-shadow: 1px -1px 11px 3px rgba(0,0,0, 0.65);
 }
 .Card img {
   max-width: 100%;
@@ -172,7 +172,7 @@ margin-bottom: 3px;
  background-position: left;
  transition: background-position 0.5s;
  border: 1px solid #cf7500;
-  
+
 }
 
 .eg-btn:hover {
@@ -189,8 +189,8 @@ margin-bottom: 3px;
 }
 
 /* .Card:hover{
-  
-  
+
+
 } */
 .cardInfo {
   padding: 15px;

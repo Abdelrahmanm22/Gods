@@ -10,80 +10,80 @@
     <link rel="icon" type="image/x-icon" href="Logo.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{URL::asset('front/assets/css/index.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/indexblack.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/0c6829628d.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color: rgb(44,43,43);">
     <!-- navigation bar -->
-    <div class="imagecontainer" style="background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(images/gallery2.jpg);width:100%;">
+    <div class="imagecontainer" style="background-image: linear-gradient(rgba(0,0,0,0.80),rgba(0,0,0,0.80)),url(images/gallery2.jpg);width:100%;">
         <nav class="navbar navbar-expand-sm  sticky-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php" style="color: #9BA4B5" id="back">Egyptian Gods</a>
+                <a class="navbar-brand" href="index.php" style="color: #cf7500" id="back">Egyptian Gods</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="indexblack.php">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Historical</a>
                             <ul class="dropdown-menu menu">
                                 <div><img src="images/osiris-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Osiris Myths</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Osiris Myths</a></li>
                                 </div>
                                 <div><img src="images/anubis-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Anubis</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Anubis</a></li>
                                 </div>
                                 <div><img src="images/horus-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Horus</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Horus</a></li>
                                 </div>
                                 <div><img src="images/montu-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Montu</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Montu</a></li>
                                 </div>
                                 <div><img src="images/ptah-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Ptah</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Ptah</a></li>
                                 </div>
                                 <div><img src="images/ra-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Ra</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Ra</a></li>
                                 </div>
                                 <div><img src="images/sekhmet-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Sekhmet</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Sekhmet</a></li>
                                 </div>
                                 <div><img src="images/shu-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Shu</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Shu</a></li>
                                 </div>
                                 <div><img src="images/tefnut-bold.png" class="dropimage">
-                                    <li><a class="dropdown-item" href="#">Tefnut</a></li>
+                                    <li><a class="dropdown-item" href="dark1.php">Tefnut</a></li>
                                 </div>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="image.php">Images</a>
+                            <a class="nav-link" href="imageblack.php">Images</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="video.php">Video</a>
+                            <a class="nav-link" href="viddark.php">Video</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="bookup.php">Reservation</a>
+                            <a class="nav-link" href="rana.php">Reservation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop - light.php">Online Shop</a>
+                            <a class="nav-link" href="shop.php">Online Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="aboutus.php">About Us</a>
+                            <a class="nav-link" href="ranab.php">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ranac.php">Contact Us</a>
+                            <a class="nav-link" href="contactblack.php">Contact Us</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
                             <ul class="dropdown-menu menu22">
-                                <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
+                                <li><a class="dropdown-item" href="signupblack.php">Sign Up</a></li>
                                 <li><a class="dropdown-item" href="profile.php">Profile Edit</a></li>
                             </ul>
                         </li>
@@ -91,7 +91,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="indexblack.php" class="ic" style="text-decoration: none;"><span style='font-size:30px;  margin-right: 150px;margin-top: 30px;'>&#127763;</span></a>
+            <a href="index.php" class="ic" style="text-decoration: none;"><span style='font-size:30px;  margin-right: 150px;margin-top: 30px;'>&#127763;</span></a>
 
         </nav>
 
@@ -120,22 +120,20 @@
     <div class="tripcontainer">
         <div class="triptext">We Offer The Best Trips</div>
         <div class="tripstext2">You can book with us and enjoy trips to many temples and have the inscriptions explained to you in detail</div>
-
         <div class="tripimage">
-            <img src="{{URL::asset('front/assets/img/temple1.jpg')}}" class="temple">
+            <img src="{{asset('front/assets/images/temple1.jpg')}}" class="temple">
             <div class="trip"><a href="bookup.php" style="text-decoration: none;color:#9BA4B5">VIEW TRIP</a></div>
-
         </div>
         <div class="tripimage2">
-            <img src="{{URL::asset('front/assets/img/templehorus.jpg')}}">
+            <img src="{{asset('front/assets/img/templehorus.jpg')}}">
             <div class="trip2"><a href="bookup.php" style="text-decoration: none;color:#9BA4B5">VIEW TRIP</a></div>
         </div>
-
         <div class="tripimage3">
-            <img src="{{URL::asset('front/assets/img/ISIS.jpg')}}">
+            <img src="{{asset('front/assets/img/ISIS.jpg')}}">
             <div class="trip3"><a href="bookup.php" style="text-decoration: none;color:#9BA4B5">VIEW TRIP</a></div>
         </div>
     </div>
+
     <!-- End -->
 
     <br>
@@ -149,20 +147,16 @@
     <br>
 
     <div style="background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(images/Heroooo.png);width:100%" class="backgal">
-
-
         <p class="pgallery">Gallery</p>
         <div class="gallery">
-            <img src="{{URL::asset('front/assets/img/anubis.jpg')}}" alt="anubis">
+            <img src="{asset('front/assets/img/anubis.jpg')}}" alt="anubis">
 
         </div>
-
         <div class="gallery">
-            <img src="{{URL::asset('front/assets/img/Horuss.jpg')}}" alt="Horus">
+            <img src="{asset('front/assets/img/Horuss.jpg')}}" alt="Horus">
         </div>
-
         <div class="gallery">
-            <img src="{{URL::asset('front/assets/img/isiss.jpg')}}" alt="isis">
+            <img src="{asset('front/assets/img/isiss.jpg')}}" alt="isis">
 
         </div>
         <br>
@@ -181,15 +175,15 @@
 
         <div>
             <div class="gallery1">
-                <img src="{{URL::asset('front/assets/img/Statues-of-Sekhmet.jpg')}}" alt="Sekhmet">
+                <img src="{{asset('front/assets/img/Statues-of-Sekhmet.jpg')}}" alt="Sekhmet">
 
             </div>
             <div class="gallery1">
-                <img src="{{URL::asset('front/assets/img/istockphoto-624471686-612x612.jpg')}}" alt="seth">
+                <img src="{{asset('front/assets/img/istockphoto-624471686-612x612.jpg')}}" alt="seth">
 
             </div>
             <div class="gallery1">
-                <img src="{{URL::asset('front/assets/img/c9bad9155bd0e8f8771da63389d6230c.jpg')}}" alt="ptah">
+                <img src="{{asset('front/assets/img/c9bad9155bd0e8f8771da63389d6230c.jpg')}}" alt="ptah">
 
             </div>
         </div>
@@ -197,12 +191,12 @@
 
     </div>
     </div>
-
+<!-- "{{asset('front/assets/img/imageNav/p.jfif')}}" -->
     <!-- Video -->
     <div class="videoo">
         <div>
             <video loop muted autoplay>
-                <source src="{{URL::asset('front/assets/img/video.mp4')}}">
+                <source src="{{asset('front/assets/img/video.mp4')}}">
             </video>
         </div>
         <div class="textvideo">
@@ -243,39 +237,24 @@
             <p class="texttt2">You can buy whatever you want for yourself, your friends and your family to be a beautiful memory for you. You dream, we execute</p>
         </div>
         <div class="pic1">
-            <img src="{{URL::asset('front/assets/img/shirt (2).png')}}">
+            <img src="{{asset('front/assets/img/shirt (2).png')}}">
         </div>
         <div class="pic2">
-            <img src="{{URL::asset('front/assets/img/shirt.png')}}">
+            <img src="{{asset('front/assets/img/hoodie (2).png')}}">
         </div>
         <div class="pic3">
-            <img src="{{URL::asset('front/assets/img/hoodie.png')}}">
+            <img src="{{asset('front/assets/img/shirt.png')}}">
         </div>
         <div class="shopbtn"><button>Buy now</button></div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     <br>
     <br>
     <br>
     <br>
     <br>
-
-
-
-
-
+    <?php
+    include "footerblack.php"
+    ?>
 </body>
 
 </html>
