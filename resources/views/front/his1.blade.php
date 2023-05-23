@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="{{URL::asset('front/assets/css/his1.css'))">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/his1.css')}}">
     <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
     <link rel="stylesheet" href="{{URL::asset('front/assets/css/headerr.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -205,7 +205,7 @@
         <a href="his2.php" style="text-decoration: none;color:#9ba4b5;">Next</a>
     </button>
 
-    <?php include 'footer.php'; ?>
+    @include('front.footer')
 
 </body>
 

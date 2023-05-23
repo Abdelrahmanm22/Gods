@@ -275,7 +275,7 @@
 
 
 
-
+    @include('front.footer')
 </body>
 
 </html>
