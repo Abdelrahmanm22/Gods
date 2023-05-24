@@ -57,9 +57,9 @@
                       <td style="width: 10px">{{$g->id}}</td>
                       <td>{{$g->God_Name}}</td>
                       <td>{{$g->Description}}</td>
-                      <td>{{$g->image}}</td>
+                      <td><img src="{{URL::asset('image/God').'/'.$g->image}}" alt="" width="200" height="400"></td>
                       <td>{{$g->idAdmin}}</td>
-                      <td><a href="" class="btn btn-default">update</a></td>
+                      <td><a href="{{url('admin/updateGod/'.$g->id)}}" class="btn btn-default">update</a></td>
                       <td><a href="{{url('admin/delete/'.$g->id)}}" class="btn btn-danger">Delete</a></td>
                       </tr>
                   @endforeach

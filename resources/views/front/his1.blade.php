@@ -127,13 +127,13 @@
     <br>
     <br>
     <br>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Anubis_standing.svg/154px-Anubis_standing.svg.png" class="img1">
+    @foreach($gods as $g)
+    <img src="{{URL::asset('image/God').'/'.$g->image}}" class="img1">
     <section class="sec1">
         <div class="anubis">
             <input type="checkbox" id="check">
-            <h1 style="color: #394867;">Anubis</h1>
-            <p>-Anubis or Inpu, Anpu in Ancient Egyptian is the Greek name of the god of death, mummification, embalming, the afterlife, cemeteries, tombs, and the Underworld, in ancient Egyptian religion, usually depicted as a canine or a man with a canine head. </p>
-            <p>-Anubis was one of the most represented deities in ancient Egyptian art . It is depicted on the royal tombs of the First Dynasty ; However, he had an already well-developed cult cult prior to this because he believed it was added to the walls to protect the dead. Anubis usually handles the king's corpse, performs embalming rites and funerals, or stands with his fellow deities at heart-weighing events in the Hall of Two Truths (Ma'at) . One of his most popular representations is his portrayal of him with the body of a man and the head of a jackal with pointed ears, standing or kneeling, and holding a gold scale while the heart of a soul is weighed by means of the Feather of Truth.</p>
+            <h1 style="color: #394867;">{{$g->God_Name}}</h1>
+            <p>{{$g->Description}}</p>
             <div class="dis">
                 <p>-In the early dynasty period , it was depicted in the form of an animal, such as a black dog. The distinctive black color of Anubis did not represent the animal, but had several symbolic meanings. For example, “the color of the corpse changed after being treated with natron and smearing the covers with a resinous substance during mummification.” Also being the color of the fertile silt of the Nile , for the Egyptians black also symbolized fertility and the possibility of rebirth in the afterlife. In the Middle Kingdom , Anubis was often depicted as a man with the head of a jackal. An extremely rare image of him in full human form was found in the tomb of Ramesses II at Abydos</p>
                 <p>-Although he does not appear in many legends, he was very popular among the Egyptians and people of other cultures. The Greeks associated it with their god Hermes , the god who leads the dead to the afterlife. The two were later known as Hermanubis. Anubis was deeply revered because, despite modern beliefs, he gave people hope. People admired the guarantee that their body would be respected at death, their souls protected and justly judged</p>
@@ -141,8 +141,9 @@
             <label for="check"> Read More </label>
         </div>
     </section>
+    @endforeach
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Montu.svg/131px-Montu.svg.png" class="img6">
+    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Montu.svg/131px-Montu.svg.png" class="img6">
     <section class="sec6">
         <div class="monto">
             <input type="checkbox" id="check3">
@@ -199,7 +200,7 @@
             </div>
             <label for="check7"> Read More </label>
         </div>
-    </section>
+    </section> -->
 
     <button class="b1">
         <a href="his2.php" style="text-decoration: none;color:#9ba4b5;">Next</a>

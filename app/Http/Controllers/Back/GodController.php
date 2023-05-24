@@ -56,6 +56,39 @@ class GodController extends Controller
         return redirect()->back()->with(['success'=>'Added successfully']);
     }
 
+    public function update($id){
+        $user = Auth::user();
+        $God= God::find($id);
+        return view('back.updateGod',compact('user','God'))->with('title','gods');
+    }
+
+
+    public function postUpdate(Request $req,$id){
+
+        $God = God::find($id);
+        $user = Auth::user();
+        //get CV 
+        if(!empty($req->img)){
+            
+            $file_extension = $req->img->getClientOriginalExtension();
+            $file_name = time().'.'.$file_extension;
+            $path = 'image/God';
+            $req->img->move($path,$file_name);
+            $God->update([
+                'image'=>$file_name,
+            ]);
+        }
+
+        
+        
+        $God->update([
+            'God_Name'=>$req->name,
+            'Description'=>$req->desc,
+            'idAdmin'=>$user->id,
+        ]);
+        return redirect()->back()->with(['success'=>'updated Successfully']);
+    }
+
 
     public function delete($id){
         $god = God::find($id);
@@ -65,4 +98,6 @@ class GodController extends Controller
         $god ->delete();
         return redirect()->route('gods')->with(['success'=>'Deleted successfully']);
     }
+
+
 }

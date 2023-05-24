@@ -220,7 +220,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('gods')}}" class="nav-link active">
+                <a href="{{route('Gods')}}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>GODS</p>
                 </a>

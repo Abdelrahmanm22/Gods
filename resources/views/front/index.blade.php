@@ -27,9 +27,12 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="{{route('myHome')}}">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('gods')}}">Historical</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Historical</a>
                             <ul class="dropdown-menu menu">
                                 <div><img src="images/osiris-bold.png" class="dropimage">
@@ -60,7 +63,7 @@
                                     <li><a class="dropdown-item" href="#">Tefnut</a></li>
                                 </div>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="image.php">Images</a>
                         </li>

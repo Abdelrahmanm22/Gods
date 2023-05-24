@@ -127,6 +127,6 @@
     </div>
 <br>
 <br>
-<?php  include "footer.php"?>
+@include('front.footer')
 </body>
 </html>

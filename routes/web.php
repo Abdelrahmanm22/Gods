@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\GodController;
+use App\Http\Controllers\Front\ClientController;
 use Faker\Guesser\Name;
 
 /*
@@ -39,13 +40,15 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     ///code authentication===============================
 
 
-    Route::get('/home', [AdminController::class, 'home'])->name('adminHome');
-    Route::get('/gods', [GodController::class, 'index'])->name('gods');
+    ///مهم جدا تقولهم علي الميدل وير===========
+    Route::get('/home', [AdminController::class, 'home'])->name('adminHome')->middleware('auth');
+    Route::get('/gods', [GodController::class, 'index'])->name('Gods')->middleware('auth');
+    Route::get('/addGod', [GodController::class, 'addGod'])->name('addGod')->middleware('auth');
+    Route::post('/postaddGod', [GodController::class, 'postAddGod'])->name('postAddGod')->middleware('auth');
+    Route::get('/delete/{God_id}',[GodController::class, 'delete'])->middleware('auth');
 
-    Route::get('/addGod', [GodController::class, 'addGod'])->name('addGod');
-    Route::post('/postaddGod', [GodController::class, 'postAddGod'])->name('postAddGod');
-
-    Route::get('/delete/{God_id}',[GodController::class, 'delete']);
+    Route::get('/updateGod/{id}',[GodController::class,'update'])->middleware('auth');
+    Route::post('/postUpdate/{id}',[GodController::class,'postUpdate'])->name('admin.update.god')->middleware('auth');
 
 
 });
@@ -56,7 +59,9 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
 
 Route::group(['namespace'=>'Front'],function(){
     // echo "hss";die;
-    Route::get('/home', [HomeController::class, 'index']) ->name('adas');
+    Route::get('/', [HomeController::class, 'index']) ->name('myHome');
+    Route::get('/gods', [HomeController::class, 'gods']) ->name('gods');
+    Route::get('/register', [ClientController::class, 'register']) ->name('signUp');
 
 });
 
