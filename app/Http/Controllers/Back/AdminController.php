@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Client;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +19,36 @@ class AdminController extends Controller
         $user = Auth::user();
         
                     
-        return view('back.index',compact('user'))->with('title','home');;
+        return view('back.index',compact('user'))->with('title','home');
+    }
+    
+    public function users(){
+        $user = Auth::user();
+        $Admins = User::all();
+        $Clients = Client::all();
+        return view('back.users',compact('user','Admins','Clients'))->with('title','Users');
+    }
+
+    public function convertToAdmin($clientID){
+        $client= Client::find($clientID);
+        User::create([
+            'user_name'=>$client->user_name,
+            'email'=>$client->email,
+            'password'=> $client->password,
+        ]);
+        $client->delete();
+        return redirect()->back()->with(['successAd'=>'Converted to Admin Successfully']);
+    }
+
+    public function convertToClient($AdminID){
+        $Admin= User::find($AdminID);
+        Client::create([
+            'user_name'=>$Admin->user_name,
+            'email'=>$Admin->email,
+            'password'=> $Admin->password,
+        ]);
+        $Admin->delete();
+        return redirect()->back()->with(['success'=>'Converted to Client Successfully']);
     }
 
 

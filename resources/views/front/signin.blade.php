@@ -26,9 +26,12 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="{{route('myHome')}}">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('gods')}}">Historical</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Historical</a>
                         <ul class="dropdown-menu menu">
                             <div><img src="images/osiris-bold.png" class="dropimage">
@@ -59,7 +62,7 @@
                                 <li><a class="dropdown-item" href="his2.php">Tefnut</a></li>
                             </div>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="image.php">Images</a>
                     </li>
@@ -70,7 +73,7 @@
                         <a class="nav-link" href="book.php">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop - light.php">Online Shop</a>
+                        <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus.php">About Us</a>
@@ -82,13 +85,13 @@
                         <a class="nav-link" href="contact.php">News</a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{route('signIn')}}" role="button" data-bs-toggle="dropdown">Sign In</a>
                         <ul class="dropdown-menu menu22">
-                            <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="profile - light.php">Profile Edit</a></li>
+                            <li><a class="dropdown-item" href="{{route('signUp')}}">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="{{route('profile')}}">Profile Edit</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -102,7 +105,13 @@
         <div class="signin">
             <p class="txtsignin1">Welcome back</p>
             <p class="txtsignin2">To keep connected with us please login with your personal information</p>
-            <form action="#" method="post">
+            @if(Session::has('error'))
+                <div class="alert alert-success" role="alert">
+                  {{Session::get('error')}}
+                </div>
+            @endif
+            <form action="{{route('postSignIn')}}" method="post">
+                @csrf
                 <label>Email</label>
                 <br>
                 <input type="email" name="email" id="email">
@@ -111,21 +120,22 @@
                 <br>
                 <input type="password" name="password" id="password">
                 <br>
-                <input type="checkbox" id="remember" name="remember" value="remember">
-                <label for="remember" id="remember1">Remember me</label><span class="forgot"><a href="#">Forgot password ?</a></span>
+                <!-- <input type="checkbox" id="remember" name="remember" value="remember">
+                <label for="remember" id="remember1">Remember me</label><span class="forgot"><a href="#">Forgot password ?</a></span> -->
                 <input type="submit" id="submit" value="Sign In">
             </form>
-            <p class="account">Don't have an account ? <a href="signup.php" style="text-decoration:none;color:#9BA4B5"> Sign Up </a> </p>
+            <p class="account">Don't have an account ? <a href="{{route('signUp')}}" style="text-decoration:none;color:#9BA4B5"> Sign Up </a> </p>
+            <p class="account">You are Admin? <a href="{{route('login')}}" style="text-decoration:none;color:#9BA4B5"> Sign in as Admin </a> </p>
         </div>
         <div class="containtextt">
             <p class="txtsignin1"> Create an account</p>
             <p class="txtsignin2">Connect with us by creating an account</p>
-            <button><a href="signup.php" style="text-decoration: none;color:white;font-weight:bold">Sign Up</a></button>
+            <button><a href="{{route('signUp')}}" style="text-decoration: none;color:white;font-weight:bold">Sign Up</a></button>
         </div>
     </div>
 
 
-    <?php include "footer.php"; ?>
+    @include('front.footer')
 </body>
 
 </html>

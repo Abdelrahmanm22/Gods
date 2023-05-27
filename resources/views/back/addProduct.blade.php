@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Add God</h1>
+          <h1 class="m-0">Add Product</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -30,31 +30,31 @@
                 </div>
             @endif
               <div class="card-header">
-                <h3 class="card-title">Add God</h3>
+                <h3 class="card-title">Add Product</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('postAddGod')}}" method="post" enctype="multipart/form-data">
+              <form action="{{route('postAddProduct')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputName">God Name</label>
+                    <label for="exampleInputName">Product Name</label>
                     <input type="text" class="form-control"  name="name"  id="exampleInputName" placeholder="Enter User Name">
                     @error('name')
                        <small class="form-txt text-danger">{{$message}}</small>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputDescription">Description</label>
-                    <textarea rows="4" cols="50" class="form-control" name="desc" id="exampleInputDescription" placeholder="Description"></textarea>
-                    @error('desc')
+                    <label for="exampleInputPrice">Price</label>
+                    <input type="text" class="form-control"  name="price"  id="exampleInputName" placeholder="Enter Product Price">
+                    @error('price')
                        <small class="form-txt text-danger">{{$message}}</small>
                     @enderror
                   </div>
                   
                   <div class="form-group">
                     <!-- <img src="" width="100px" height="100px"> -->
-                    <label for="exampleInputFile">Image</label>
+                    <label for="exampleInputFile">Product Image</label>
                     <div class="input-group">
                       <div class="custom-file">
                         <input type="file" name="img" class="custom-file-input" id="exampleInputFile">

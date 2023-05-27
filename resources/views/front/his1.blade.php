@@ -21,9 +21,12 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="{{route('myHome')}}">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('gods')}}">Historical</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="his1.php" role="button" data-bs-toggle="dropdown">Historical</a>
                         <ul class="dropdown-menu menu">
                             <div><img src="images/osiris-bold.png" class="dropimage">
@@ -54,7 +57,7 @@
                                 <li><a class="dropdown-item" href="his2.php">Tefnut</a></li>
                             </div>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="image.php">Images</a>
                     </li>
@@ -65,7 +68,7 @@
                         <a class="nav-link" href="book.php">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop - light.php">Online Shop</a>
+                        <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus.php">About Us</a>
@@ -80,8 +83,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
                         <ul class="dropdown-menu menu22">
-                            <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="profile - light.php">Profile Edit</a></li>
+                            <li><a class="dropdown-item" href="{{route('signUp')}}">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="{{route('profile')}}">Profile Edit</a></li>
                         </ul>
                     </li>
                 </ul>

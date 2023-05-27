@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egyptian Gods |Profile</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="icon" type="image/x-icon" href="images/Logo.png" />
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="headerr.css">
+    <link rel="icon" type="image/x-icon" href="{{URL::asset('front/assets/img/Logo.png')}}" />
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/headerr.css')}}">
     <script src="https://kit.fontawesome.com/0c6829628d.js" crossorigin="anonymous"></script>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,8 +89,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
                         <ul class="dropdown-menu menu22">
-                            <li><a class="dropdown-item" href="signin.php">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="profile - light.php">Profile Edit</a></li>
+                            <li><a class="dropdown-item" href="{{route('signUp')}}">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="{{route('profile')}}">Profile Edit</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -104,7 +104,7 @@
         <div class="leftContent">
             <div class="user">
                 <div class="formImg">
-                    <img src="{{asset('front/assets/img/product/profilepic.webp')}}" alt="profile picture" />
+                    <img src="{{URL::asset('front/assets/img/product/profilepic.webp')}}" alt="profile picture" />
                 </div>
                 <div class="bio">
                     <h1 class="userName">John Doe</h1>

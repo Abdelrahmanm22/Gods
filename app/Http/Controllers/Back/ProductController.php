@@ -3,33 +3,32 @@
 namespace App\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\controller;
-use App\Models\God;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Support\Facades\Validator;
-class GodController extends Controller
+use Illuminate\Support\Facades\Auth;
+
+class ProductController extends Controller
 {
-     
-    
+    //
     public function index(){
         $user = Auth::user();
-        $gods = God::all();
-        return view('back.allGod',compact('user','gods'))->with('title','Gods');
+        $products = Product::all();
+        return view('back.allProduct',compact('user','products'))->with('title','Products');
     }
 
-
-    public function addGod(){
+    public function addProduct(){
         $user = Auth::user();
-        return view('back.addGod',compact('user'))->with('title','Add God');
+        return view('back.addProduct',compact('user'))->with('title','Add Product');
     }
-
-    public function postAddGod(Request $request){
+    
+    public function postAddProduct(Request $request){
         $user = Auth::user();
          
 
         $validator = Validator::make($request->all(),[
             'name'=>'required|max:100',
-            'desc'=>'required',
+            'price'=>'required|numeric',
             'img'=>'required',
         ]);
 
@@ -41,15 +40,15 @@ class GodController extends Controller
 
         $file_extension = $request->img->getClientOriginalExtension();
         $file_name = time().'.'.$file_extension;
-        $path = 'image/God';
+        $path = 'image/Product';
         $request->img->move($path,$file_name);
 
         
         // $password = Hash::make($request['password']);
         //push data in database
-        God::create([
-            'God_name'=>$request->name,
-            'Description'=>$request->desc,
+        Product::create([
+            'name'=>$request->name,
+            'price'=>$request->price,
             'image'=>$file_name,
             'idAdmin'=>$user->id,
         ]);
@@ -58,46 +57,43 @@ class GodController extends Controller
 
     public function update($id){
         $user = Auth::user();
-        $God= God::find($id);
-        return view('back.updateGod',compact('user','God'))->with('title','gods');
+        $products= Product::find($id);
+        return view('back.updateProduct',compact('user','products'))->with('title','Update Product');
     }
 
 
     public function postUpdate(Request $req,$id){
 
-        $God = God::find($id);
+        $product = Product::find($id);
         $user = Auth::user();
         //get CV 
         if(!empty($req->img)){
             
             $file_extension = $req->img->getClientOriginalExtension();
             $file_name = time().'.'.$file_extension;
-            $path = 'image/God';
+            $path = 'image/Product';
             $req->img->move($path,$file_name);
-            $God->update([
+            $product->update([
                 'image'=>$file_name,
             ]);
         }
 
         
         
-        $God->update([
-            'God_Name'=>$req->name,
-            'Description'=>$req->desc,
+        $product->update([
+            'name'=>$req->name,
+            'price'=>$req->price,
             'idAdmin'=>$user->id,
         ]);
         return redirect()->back()->with(['success'=>'updated Successfully']);
     }
 
-
     public function delete($id){
-        $god = God::find($id);
-        if(!$god){
-            return redirect()->back()->with(['error'=>'This God not Found']);
+        $product = Product::find($id);
+        if(!$product){
+            return redirect()->back()->with(['error'=>'This Product not Found']);
         }
-        $god ->delete();
-        return redirect()->route('Gods')->with(['success'=>'Deleted successfully']);
+        $product ->delete();
+        return redirect()->route('products')->with(['success'=>'Deleted successfully']);
     }
-
-
 }

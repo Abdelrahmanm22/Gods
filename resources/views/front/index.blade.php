@@ -74,7 +74,7 @@
                             <a class="nav-link" href="bookup.php">Reservation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop - light.php">Online Shop</a>
+                            <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="aboutus.php">About Us</a>
@@ -86,8 +86,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
                             <ul class="dropdown-menu menu22">
-                                <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
-                                <li><a class="dropdown-item" href="profile.php">Profile Edit</a></li>
+                                <li><a class="dropdown-item" href="{{route('signUp')}}">Sign Up</a></li>
+                                <li><a class="dropdown-item" href="{{route('profile')}}">Profile Edit</a></li>
                             </ul>
                         </li>
 

@@ -14,13 +14,13 @@ class CustomAuthMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
-    {
-        if (!Auth::guard('custom')->check()) {
-            // User is not authenticated
-            return redirect('/login');
-            // OR return response()->json(['message' => 'Unauthenticated'], 401);
-        }
-        return $next($request);
-    }
+    // public function handle(Request $request, Closure $next)
+    // {
+    //     if (!Auth::guard('custom')->check()) {
+    //         User is not authenticated
+    //         return redirect('/login');
+    //         OR return response()->json(['message' => 'Unauthenticated'], 401);
+    //     }
+    //     return $next($request);
+    // }
 }

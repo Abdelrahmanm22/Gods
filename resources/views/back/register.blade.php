@@ -48,7 +48,9 @@
                     <div class="form-group">
                     <label for="exampleInputUsername">User Name</label>
                     <input type="text" name="username" class="form-control" id="exampleInputUsername" placeholder="Enter user name">
-                    
+                    @error('username')
+                       <small class="form-txt text-danger">{{$message}}</small>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>

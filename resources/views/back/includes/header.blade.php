@@ -226,15 +226,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('products')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Products</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Contacts</p>
+                  <p>Contact</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('users')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Users</p>
                 </a>
               </li>
             </ul>

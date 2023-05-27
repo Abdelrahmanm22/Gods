@@ -91,7 +91,7 @@ label{
 transform: scale(0.90);}
 .account{
     margin-left: 85px;
-    margin-top: 5%;
+    /* margin-top: %; */
     color: #394867;
 }
 

@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egyptian Gods |Profile</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{URL::asset('front/assets/img/Logo.png')}}" />
     <script src="https://kit.fontawesome.com/0c6829628d.js" crossorigin="anonymous"></script>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{URL::asset('front/assets/css/profile.css')}}" />
-    <!-- <link rel="stylesheet" href="{{URL::asset('front/assets/css/index.css')}}"> -->
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/index.css')}}">
 </head>
 
 <body>
@@ -84,13 +84,13 @@
                         <a class="nav-link" href="contactb.php">Contact Us</a>
                     </li>
 
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="signinblack.css" role="button" data-bs-toggle="dropdown">Sign In</a>
                         <ul class="dropdown-menu menu22">
                             <li><a class="dropdown-item" href="signupblack.php">Sign Up</a></li>
                             <li><a class="dropdown-item" href="profile.php">Profile Edit</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>
@@ -107,10 +107,11 @@
         <div class="leftContent">
             <div class="user">
                 <div class="formImg">
-                    <img src="{{asset(front/assets/img/product/profilepic.webp')}}" alt="profile picture" />
+                    <img src="{{URL::asset('image/Client').'/'.$client->image}}" alt="profile picture" />
                 </div>
+                
                 <div class="bio">
-                    <h1 class="userName">John Doe</h1>
+                    <h1 class="userName">{{$client->user_name}}</h1>
                     <p class="title">Top member in Egyptian Gods</p>
                 </div>
             </div>
@@ -121,14 +122,16 @@
                 <li class="tabTwo" data-cont=".privacyCont">Privacy</li>
                 <li class="tabThree" data-cont=".notificationCont">Notifications</li>
             </ul>
+            <!-- <button type="button" ></button> -->
+            <a href="{{route('clientLogout')}}" class="btn btn-secondary">Logout</a>
         </div>
 
         <div class="tabContent">
             <div class="homeCont">
                 <h3>HI THERE!</h3>
 
-                <h1>I'M JOHN DOE</h1>
-
+                <h1>I'M {{$client->user_name}}</h1>
+                
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea
                     quas a officia adipisci explicabo porro quo vel nemo sit rem
@@ -138,6 +141,13 @@
                     blanditiis fuga reiciendis reprehenderit odio quo? Dicta
                     necessitatibus corrupti quaerat aliquam deserunt molestiae?
                 </p>
+                <form action="{{route('updatePhoto')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile"></label>
+                    <button type="submit" class="btn btn-warning">Save Photo</button>
+                </form>
+                
             </div>
             <div class="aboutCont">
                 <form action="profile.php" method="post">
@@ -147,11 +157,11 @@
                     </div>
                     <!-- <div class="fullName"> -->
                         <label for="fullName">Full Name:</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="john doe" />
+                        <input type="text" id="fullName" name="fullName" placeholder="{{$client->user_name}}" />
                         <!-- </div> -->
                         <!-- <div class="email"> -->
                             <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" placeholder="john@gmail.com" />
+                            <input type="email" id="email" name="email" placeholder="{{$client->email}}" />
                             <!-- </div> -->
                             <!-- <div class="birthday"> -->
                                 <label for="birthday">Birth Date:</label>
@@ -256,7 +266,7 @@
             </div>
         </div>
     </main>
-    <?php include "footerblack.php" ?>
+    @include('front.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{URL::asset('front/assets/js/profile.js')}}"></script>
 </body>
