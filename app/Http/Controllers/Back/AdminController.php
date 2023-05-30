@@ -22,36 +22,7 @@ class AdminController extends Controller
         return view('back.index',compact('user'))->with('title','home');
     }
     
-    public function users(){
-        $user = Auth::user();
-        $myId = $user->id;
-        $Admins = User::where('id', '<>', $myId)->get();
-        $Clients = Client::all();
-        return view('back.users',compact('user','Admins','Clients'))->with('title','Users');
-    }
-
-    public function convertToAdmin($clientID){
-        $client= Client::find($clientID);
-        User::create([
-            'user_name'=>$client->user_name,
-            'email'=>$client->email,
-            'password'=> $client->password,
-        ]);
-        $client->delete();
-        return redirect()->back()->with(['successAd'=>'Converted to Admin Successfully']);
-    }
-
-    public function convertToClient($AdminID){
-        $Admin= User::find($AdminID);
-        Client::create([
-            'user_name'=>$Admin->user_name,
-            'email'=>$Admin->email,
-            'password'=> $Admin->password,
-        ]);
-        $Admin->delete();
-        return redirect()->back()->with(['success'=>'Converted to Client Successfully']);
-    }
-
+    
 
     public function register(){
         
@@ -116,4 +87,53 @@ class AdminController extends Controller
         Auth::logout();
         return redirect('/admin/login');
     } 
+
+    public function users(){
+        $user = Auth::user();
+        $myId = $user->id;
+        $Admins = User::where('id', '<>', $myId)->get();
+        $Clients = Client::all();
+        return view('back.users',compact('user','Admins','Clients'))->with('title','Users');
+    }
+
+    public function convertToAdmin($clientID){
+        $client= Client::find($clientID);
+        User::create([
+            'user_name'=>$client->user_name,
+            'email'=>$client->email,
+            'password'=> $client->password,
+        ]);
+        $client->delete();
+        return redirect()->back()->with(['successAd'=>'Converted to Admin Successfully']);
+    }
+
+    public function convertToClient($AdminID){
+        $Admin= User::find($AdminID);
+        Client::create([
+            'user_name'=>$Admin->user_name,
+            'email'=>$Admin->email,
+            'password'=> $Admin->password,
+        ]);
+        $Admin->delete();
+        return redirect()->back()->with(['success'=>'Converted to Client Successfully']);
+    }
+
+    public function changePasswordForClient($id){
+        $user = Auth::user();
+        $client= Client::find($id);
+        return view('back.updatePassword',compact('user','client'))->with('title','Password Update');
+    }
+
+    public function postUpdatePassword(Request $req,$id){
+        $client= Client::find($id);
+        // echo $req['password'].' '.$id;die;
+
+        $password = Hash::make($req['password']);
+        $client->update([
+            'password'=>$password,
+        ]);
+        return redirect()->back()->with(['success'=>'updated Successfully']);
+    }
+
+
 }

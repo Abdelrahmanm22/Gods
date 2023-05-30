@@ -55,6 +55,19 @@ class HomeController extends Controller
     }
 
 
+    public function book(){
+        return view('front.book');
+    }
+
+    public function images(){
+        return view('front.image');
+    }
+
+    public function video(){
+        return view('front.video');
+    }
+
+
     
 }
 

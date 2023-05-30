@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="headerrblack.css">
+    <link rel="stylesheet" href="{{URL::asset('front./assets/css/headerrblack.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egyptian Gods |Online Shop</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="{{URL::asset('front./assets/css/normalize.css')}}">
     <meta name="description" content="" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -66,23 +66,26 @@
                         </ul>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="imageblack.php">Images</a>
+                        <a class="nav-link" href="{{route('image')}}">Images</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="viddark.php">Video</a>
+                        <a class="nav-link" href="{{route('video')}}">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="bookb.php">Reservation</a>
+                        <a class="nav-link" href="{{route('book')}}">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.php">Online Shop</a>
+                        <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutusb.php">About Us</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="aboutus.php">About Us</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="contact.php">News</a>
+                    </li> -->
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="signinblack.css" role="button" data-bs-toggle="dropdown">Sign In</a>

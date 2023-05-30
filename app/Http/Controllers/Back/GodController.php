@@ -67,7 +67,7 @@ class GodController extends Controller
 
         $God = God::find($id);
         $user = Auth::user();
-        //get CV 
+        //get Image for God
         if(!empty($req->img)){
             
             $file_extension = $req->img->getClientOriginalExtension();

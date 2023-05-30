@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-sm  sticky-top" style="width: 100%;">
 
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php" style="color: #9BA4B5" id="back">Egyptian Gods</a>
+            <a class="navbar-brand" href="{{route('myHome')}}" style="color: #9BA4B5" id="back">Egyptian Gods</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,29 +59,29 @@
                         </ul>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="image.php">Images</a>
+                        <a class="nav-link" href="{{route('image')}}">Images</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="video.php">Video</a>
+                        <a class="nav-link" href="{{route('video')}}">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="book.php">Reservation</a>
+                        <a class="nav-link" href="{{route('book')}}">Reservation</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="aboutus.php">About Us</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="contact.php">News</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
+                        <a class="nav-link dropdown-toggle" href="{{route('signIn')}}" role="button" data-bs-toggle="dropdown">Sign In</a>
                         <ul class="dropdown-menu menu22">
                             <li><a class="dropdown-item" href="{{route('signUp')}}">Sign Up</a></li>
                             <li><a class="dropdown-item" href="{{route('profile')}}">Profile Edit</a></li>

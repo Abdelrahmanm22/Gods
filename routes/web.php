@@ -66,13 +66,17 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/deleteProduct/{Product_id}',[ProductController::class, 'delete'])->middleware('auth');
     //////////////////////Routes For Product//////////////////////////////
 
-
+    //////////////////////Admin convert client to admin And vice versa////////////////////
     Route::get('/users', [AdminController::class, 'users'])->name('users')->middleware('auth');
     Route::get('/convertToAdmin/{id}',[AdminController::class,'convertToAdmin'])->name('ctAdmin')->middleware('auth');
     Route::get('/convertToClient/{id}',[AdminController::class,'convertToClient'])->name('ctClient')->middleware('auth');
+    Route::get('/updatePass/{id}',[AdminController::class,'changePasswordForClient'])->middleware('auth');
+    Route::post('/postUpdatePass/{id}',[AdminController::class,'postUpdatePassword'])->name('admin.update.password')->middleware('auth');
+    //////////////////////Admin convert client to admin And vice versa////////////////
 
-
+    /////////////////////contact for admins//////////////////////////////////
     Route::get('/messages', [ContactController::class, 'index'])->name('messages')->middleware('auth');
+    /////////////////////contact for admins//////////////////////////////////
 
 });
 
@@ -87,32 +91,51 @@ Route::group(['namespace'=>'Front'],function(){
     ///code authentication Client===============================
     Route::get('/register', [ClientController::class, 'register']) ->name('signUp');
     Route::post('/postRegister', [ClientController::class, 'postRegister']) ->name('postSignUp');
-    Route::group(['middleware'=>'throttle:3,1'],function(){
+    Route::group(['middleware'=>'throttle:5,1'],function(){
         Route::get('/login', [ClientController::class, 'login']) ->name('signIn');
     });
-    
     Route::post('/postLogin', [ClientController::class, 'postLogin']) ->name('postSignIn');
     Route::get('/logout', [ClientController::class, 'logout'])->name('clientLogout');
     ///code authentication Client===============================
 
 
     Route::get('/gods', [HomeController::class, 'gods']) ->name('gods');
+
+
+
+
     Route::get('/products', [HomeController::class, 'products']) ->name('shop');
+
+
+
+
+
 
     Route::get('/profile', [ClientController::class, 'profile']) ->name('profile')->middleware('auth:custom');
 
+
+
+
     Route::post('/updateClientPhoto',[ClientController::class,'clientPhoto'])->name('updatePhoto')->middleware('auth:custom');
+
+
+
 
     Route::get('/contact', [HomeController::class, 'contact']) ->name('contact');
     Route::post('/postContact', [HomeController::class, 'postContact']) ->name('postContact');
 
+
+
+
+
+    //routes for normal pages:
+    Route::get('/book', [HomeController::class, 'book']) ->name('book');
+    Route::get('/images', [HomeController::class, 'images']) ->name('image');
+    Route::get('/video', [HomeController::class, 'video']) ->name('video');
+
 });
 
 
-// Route::group(['namespace'=>'Front'],function(){
 
-//     Route::get('/home', [profileController::class, 'profile']);
-
-// });
 
 

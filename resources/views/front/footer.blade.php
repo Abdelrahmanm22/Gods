@@ -142,30 +142,30 @@
         <div class="row" style="width: 100%;height:350px">
             <div class="column historical">
                 <h2>Historical</h2>
-                <a href="his1.php">Religion</a>
-                <a href="his1.php">Gods</a>
-                <a href="his4.php">Temples</a>
+                <a href="{{route('gods')}}">Religion</a>
+                <a href="{{route('gods')}}">Gods</a>
+                <a href="{{route('gods')}}">Temples</a>
 
             </div>
 
             <div class="column">
                 <h2>About</h2>
                 <a href="aboutus.php">About us</a>
-                <a href="contact.php">Contact us</a>
+                <a href="{{route('contact')}}">Contact us</a>
                 <a href="aboutus.php">Project's team</a>
             </div>
 
             <div class="column">
                 <h2>Reservation</h2>
-                <a href="book.php">Trips</a>
-                <a href="book.php">Book your trip</a>
-                <a href="shop - light.php">Online shop</a>
+                <a href="{{route('book')}}">Trips</a>
+                <a href="{{route('book')}}">Book your trip</a>
+                <a href="{{route('shop')}}">Online shop</a>
             </div>
             <div class="column">
                 <h2>Account</h2>
-                <a href="signin.php">Sign in</a>
-                <a href="signup.php">Sign up</a>
-                <a href="profile - light.php">Profile edit</a>
+                <a href="{{route('signIn')}}">Sign in</a>
+                <a href="{{route('signUp')}}">Sign up</a>
+                <a href="{{route('profile')}}">Profile edit</a>
             </div>
         </div>
 

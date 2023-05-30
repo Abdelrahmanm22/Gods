@@ -210,16 +210,19 @@
     <nav class="navbar navbar-expand-sm  sticky-top" style="width: 100%;">
 
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php" style="color: #9BA4B5" id="back">Egyptian Gods</a>
+            <a class="navbar-brand" href="{{route('myHome')}}" style="color: #9BA4B5" id="back">Egyptian Gods</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="{{route('myHome')}}">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('gods')}}">Historical</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="his1.php" role="button" data-bs-toggle="dropdown">Historical</a>
                         <ul class="dropdown-menu menu">
                             <div><img src="images/osiris-bold.png" class="dropimage">
@@ -250,34 +253,34 @@
                                 <li><a class="dropdown-item" href="his2.php">Tefnut</a></li>
                             </div>
                         </ul>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('image')}}">Images</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="image.php">Images</a>
+                        <a class="nav-link" href="{{route('video')}}">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="video.php">Video</a>
+                        <a class="nav-link" href="{{route('book')}}">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="book.php">Reservation</a>
+                        <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop - light.php">Online Shop</a>
-                    </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="aboutus.php">About Us</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="contact.php">News</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="signin.php" role="button" data-bs-toggle="dropdown">Sign In</a>
+                        <a class="nav-link dropdown-toggle" href="{{route('signIn')}}" role="button" data-bs-toggle="dropdown">Sign In</a>
                         <ul class="dropdown-menu menu22">
-                            <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="profile - light.php">Profile Edit</a></li>
+                            <li><a class="dropdown-item" href="{{route('signUp')}}">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="{{route('profile')}}">Profile Edit</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -435,10 +438,8 @@
         <script src="{{URL::asset('front/assets/js/lightbox-plus-jquery.min.js')}}"></script>
     </div>
 
-    <?php
-    include "footer.php"
+    @include('front.footer')
 
-    ?>
 </body>
 
 </html>

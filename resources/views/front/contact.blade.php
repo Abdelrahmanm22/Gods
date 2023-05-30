@@ -72,26 +72,26 @@
                         </ul>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="image.php">Images</a>
+                        <a class="nav-link" href="{{route('image')}}">Images</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="video.php">Video</a>
+                        <a class="nav-link" href="{{route('video')}}">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="book.php">Reservation</a>
+                        <a class="nav-link" href="{{route('book')}}">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop - light.php">Online Shop</a>
+                        <a class="nav-link" href="{{route('shop')}}">Online Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="aboutus.php">About Us</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="contact.php">News</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{{route('signIn')}}" role="button" data-bs-toggle="dropdown">Sign In</a>

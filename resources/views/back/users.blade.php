@@ -49,6 +49,7 @@
                       <th>email</th>
                       <th>Image</th>
                       <th>Convert To Admin</th>
+                      <th>Update Password</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -60,6 +61,7 @@
                       <td><img src="{{URL::asset('image/Client').'/'.$c->image}}" alt="" width="100" height="150"></td>
                       
                       <td><a href="{{url('admin/convertToAdmin/'.$c->id)}}" class="btn btn-default">convert</a></td>
+                      <td><a href="{{url('admin/updatePass/'.$c->id)}}" class="btn btn-default">update</a></td>
                   @endforeach
                     
                   </tbody>
