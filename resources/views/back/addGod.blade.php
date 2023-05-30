@@ -12,7 +12,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{route('logout')}}">logout</a></li>
-            <li class="breadcrumb-item active">Home</li>
+            <li class="breadcrumb-item active"><a href="{{route('adminHome')}}">Home</a></li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->

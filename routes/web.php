@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\GodController;
 use App\Http\Controllers\Back\ProductController;
+use App\Http\Controllers\Back\ContactController;
 use App\Http\Controllers\Front\ClientController;
 use Faker\Guesser\Name;
 
@@ -36,6 +37,9 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/register', [AdminController::class, 'register'])->name('register');
     Route::post('/postRegister', [AdminController::class, 'postRegister'])->name('adminRegister');
     Route::get('/login', [AdminController::class, 'login'])->name('login');
+    Route::group(['middleware'=>'throttle:5,1'],function(){
+        Route::get('/login', [AdminController::class, 'login'])->name('login');
+    });
     Route::post('/postLogin', [AdminController::class, 'postLogin'])->name('adminLogin');
     Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
     ///code authentication Admin===============================
@@ -67,6 +71,9 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/convertToAdmin/{id}',[AdminController::class,'convertToAdmin'])->name('ctAdmin')->middleware('auth');
     Route::get('/convertToClient/{id}',[AdminController::class,'convertToClient'])->name('ctClient')->middleware('auth');
 
+
+    Route::get('/messages', [ContactController::class, 'index'])->name('messages')->middleware('auth');
+
 });
 
 
@@ -80,7 +87,10 @@ Route::group(['namespace'=>'Front'],function(){
     ///code authentication Client===============================
     Route::get('/register', [ClientController::class, 'register']) ->name('signUp');
     Route::post('/postRegister', [ClientController::class, 'postRegister']) ->name('postSignUp');
-    Route::get('/login', [ClientController::class, 'login']) ->name('signIn');
+    Route::group(['middleware'=>'throttle:3,1'],function(){
+        Route::get('/login', [ClientController::class, 'login']) ->name('signIn');
+    });
+    
     Route::post('/postLogin', [ClientController::class, 'postLogin']) ->name('postSignIn');
     Route::get('/logout', [ClientController::class, 'logout'])->name('clientLogout');
     ///code authentication Client===============================
@@ -89,10 +99,12 @@ Route::group(['namespace'=>'Front'],function(){
     Route::get('/gods', [HomeController::class, 'gods']) ->name('gods');
     Route::get('/products', [HomeController::class, 'products']) ->name('shop');
 
-    Route::get('/profile', [ClientController::class, 'profile']) ->name('profile')->middleware('auth:custom');;
+    Route::get('/profile', [ClientController::class, 'profile']) ->name('profile')->middleware('auth:custom');
 
     Route::post('/updateClientPhoto',[ClientController::class,'clientPhoto'])->name('updatePhoto')->middleware('auth:custom');
-    
+
+    Route::get('/contact', [HomeController::class, 'contact']) ->name('contact');
+    Route::post('/postContact', [HomeController::class, 'postContact']) ->name('postContact');
 
 });
 

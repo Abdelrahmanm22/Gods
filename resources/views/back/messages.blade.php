@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Settings</h1>
+          <h1 class="m-0">Messages</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
     <div class="container-fluid">
     <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Setting Table</h3>
+                <h3 class="card-title">Contact Table</h3>
               </div>
               <!-- /.card-header -->
               @if(Session::has('error'))
@@ -43,30 +43,28 @@
                   <thead>
                     <tr>
                       <th style="width: 10px">#</th>
-                      <th>God Name</th>
-                      <th>Description</th>
-                      <th>Image</th>
-                      <th>Admin Id</th>
-                      <th>UPDATE</th>
-                      <th>DELETE</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Message</th>
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach($gods as $g)
+                  @foreach($messages as $m)
                       <tr>
                       <td style="width: 10px">{{ $loop->iteration }}</td>
-                      <td>{{$g->God_Name}}</td>
-                      <td>{{$g->Description}}</td>
-                      <td><img src="{{URL::asset('image/God').'/'.$g->image}}" alt="" width="200" height="400"></td>
-                      <td>{{$g->idAdmin}}</td>
-                      <td><a href="{{url('admin/updateGod/'.$g->id)}}" class="btn btn-default">update</a></td>
-                      <td><a href="{{url('admin/deleteGod/'.$g->id)}}" class="btn btn-danger">Delete</a></td>
+                      <td>{{$m->name}}</td>
+                      <td>{{$m->email}}</td>
+                      
+                      <td>{{$m->phone}}</td>
+                      <td>{{$m->message}}</td>
+                      
                       </tr>
                   @endforeach
                     
                   </tbody>
                 </table>
-                <a href="{{route('addGod')}}" class="btn btn-dark">Add God</a>
+                <!-- <a href="{{route('addProduct')}}" class="btn btn-dark">Add Product</a> -->
               </div>
               
               <!-- /.card-body -->

@@ -24,7 +24,8 @@ class AdminController extends Controller
     
     public function users(){
         $user = Auth::user();
-        $Admins = User::all();
+        $myId = $user->id;
+        $Admins = User::where('id', '<>', $myId)->get();
         $Clients = Client::all();
         return view('back.users',compact('user','Admins','Clients'))->with('title','Users');
     }

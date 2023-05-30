@@ -31,9 +31,12 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="indexblack.php">Home</a>
+                        <a class="nav-link" href="{{route('myHome')}}">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('gods')}}">Historical</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="dark1.php" role="button" data-bs-toggle="dropdown">Historical</a>
                         <ul class="dropdown-menu menu">
                             <div><img src="images/osiris-bold.png" class="dropimage">
@@ -64,7 +67,7 @@
                                 <li><a class="dropdown-item" href="dark2.php">Tefnut</a></li>
                             </div>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="imageblack.php">Images</a>
                     </li>
@@ -81,7 +84,7 @@
                         <a class="nav-link" href="aboutusb.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactb.php">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
 
                     <!-- <li class="nav-item dropdown">

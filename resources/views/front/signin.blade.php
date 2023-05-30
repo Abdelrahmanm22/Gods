@@ -79,7 +79,7 @@
                         <a class="nav-link" href="aboutus.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">News</a>
@@ -110,6 +110,15 @@
                   {{Session::get('error')}}
                 </div>
             @endif
+            <!-- @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif -->
             <form action="{{route('postSignIn')}}" method="post">
                 @csrf
                 <label>Email</label>
