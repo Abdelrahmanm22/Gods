@@ -134,6 +134,4 @@ class AdminController extends Controller
         ]);
         return redirect()->back()->with(['success'=>'updated Successfully']);
     }
-
-
 }

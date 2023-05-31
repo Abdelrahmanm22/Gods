@@ -53,7 +53,7 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::post('/postaddGod', [GodController::class, 'postAddGod'])->name('postAddGod')->middleware('auth');
     Route::get('/deleteGod/{God_id}',[GodController::class, 'delete'])->middleware('auth');
     Route::get('/updateGod/{id}',[GodController::class,'update'])->middleware('auth');
-    Route::post('/postUpdate/{id}',[GodController::class,'postUpdate'])->name('admin.update.god')->middleware('auth');
+    Route::post('/postUpdateGod/{id}',[GodController::class,'postUpdate'])->name('admin.update.God')->middleware('auth');
     //////////////////////Routes For God//////////////////////////////
 
 
@@ -62,7 +62,7 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/addProduct', [ProductController::class, 'addProduct'])->name('addProduct')->middleware('auth');
     Route::post('/postAddProduct', [ProductController::class, 'postAddProduct'])->name('postAddProduct')->middleware('auth');
     Route::get('/updateProduct/{id}',[ProductController::class,'update'])->middleware('auth');
-    Route::post('/postUpdate/{id}',[ProductController::class,'postUpdate'])->name('admin.update.product')->middleware('auth');
+    Route::post('/postUpdateProduct/{id}',[ProductController::class,'postUpdate'])->name('admin.update.product')->middleware('auth');
     Route::get('/deleteProduct/{Product_id}',[ProductController::class, 'delete'])->middleware('auth');
     //////////////////////Routes For Product//////////////////////////////
 

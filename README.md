@@ -62,3 +62,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# *All the features that have been added so far:* : 
+-Login and Register For Admin and Client with all validation Fields and apply middleware for permissions
+-Admin can add/ubdate/delete Gods (صنم حقير  عشان لا اله الا الله ياجدعان) 
+-Admin can add/ubdate/delete Product
+-Admin can see the incoming messages from clients via the contact 
+-Admin can convert client to admin and vice versa
+-Admin can change password for client without see old password
+-Client can update his information and upload profile picture
+-Assign the throttle middleware to a route or a group of routes.
+

@@ -102,7 +102,7 @@
                       <th>User Name</th>
                       <th>email</th>
                       <!-- <th>Image</th> -->
-                      <th>Convert To Admin</th>
+                      <th>Convert To Client</th>
                     </tr>
                   </thead>
                   <tbody>
