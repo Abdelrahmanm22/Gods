@@ -101,28 +101,36 @@
 
     <div>
         <div class="container">
-            <h1>Book Up!</h1>
+            <h1 class="welstatment">Book Up!</h1>
             <div class="connexion">
                 <div class="contact-form">
                     <form>
-                        <label for="name" id="name">User Name</label>
+                        <label for="name" id="name">User Name:</label>
                         <input placeholder="User Name" type="text" id="name" name="name">
-                        <label for="country" id="country">Your Country</label>
-                        <input placeholder="Your Country" type="text" id="country" name="country">
-                        <label for="email">E-mail</label>
+
+                        <label for="email">E-mail:</label>
                         <input placeholder="E-mail" type="text" id="email" name="email">
-                        <label for="phone">Phone</label>
+
+                        <label for="phone">Phone:</label>
                         <input placeholder="Phone" type="text" id="phone" name="phone">
-                        <label for="address">Address</label>
+
+                        <label for="country" id="country">Your Country:</label>
+                        <input placeholder="Your Country" type="text" id="country" name="country">
+                        
+                        <label for="address">Address:</label>
                         <input placeholder="Address" type="text" id="address" name="address">
-                        <label for="Date of visit">Date of visit</label>
+
+                        <label for="Date of visit">Date of visit:</label>
                         <input type="datetime-local" id="Date of visit" name="Date of visit">
-                        <label for="number">Number of members</label>
+
+                        <label for="number">Number of members:</label>
                         <input type="number" id="number" name="number" placeholder="member">
-                        <label for="number">Number of children</label>
+
+                        <label for="number">Number of children:</label>
                         <input type="number" id="number" name="number" placeholder="children">
-                        <label for="god">Choose god you want visit</label>
-                        <select id="god" name="god">
+
+                        <label for="god">Choose god you want visit:</label>
+                        <select id="god" name="god" placeholder="select god">
                             <option value="">Choose God</option>
                             <option value="oser">Osiris</option>
                             <option value="isis">Isis</option>
@@ -136,7 +144,7 @@
                             <option value="oser">Geb</option>
                             <option value="oser">Anubis</option>
                         </select>
-                        <label for="tourism">Tourism</label>
+                        <label for="tourism">Tourism:</label>
                         <select id="tourism" name="tourism">
                             <option value="">Choose Tourism</option>
                             <option value="s">Smiraj Tourism</option>
@@ -145,7 +153,7 @@
                             <option value="cana">Gest Egypt Tours</option>
                             <option value="usa">Galaxia Tours</option>
                         </select>
-                        <label for="veh">Choose type of vehicle</label>
+                        <label for="veh">Choose type of vehicle:</label>
                         <select id="veh" name="veh">
                             <div class="h">
                                 <option value="">Choose Vehicle</option>
@@ -155,7 +163,7 @@
                                 <option value="train">Train</option>
                             </div>
                         </select>
-                        <label for="text"> Note</label>
+                        <label for="text"> Note:</label>
                         <textarea name="message" rows="4" cols="30">Your Note...
                          </textarea>
                         <label>Total Cost = 0 Eg</label>
@@ -163,12 +171,7 @@
                     </form>
                 </div>
             </div>
-
-
-
-
         </div>
-
     </div>
     <br>
     <br>

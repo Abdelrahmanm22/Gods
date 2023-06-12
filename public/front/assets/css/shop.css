@@ -20,12 +20,13 @@
   box-sizing: border-box;
   padding: 0%;
   margin: 0%;
+
 }
 body {
   background-color: var(--dark-background);
   font-family: "Cairo Play", cursive;
   color: var(--font-color);
-  background-image: url(../front/assets/img/product/backgroundlolo.jpg);
+  background-image: "{{URL::asset('../front/assets/img/product/backgroundlolo.jpg')}}";
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../front/assets/img/product/backgroundlolo.jpg);
 
   /* background-size: contain; */
@@ -99,7 +100,7 @@ main {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0,0.85);
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0,0.85) !important;
   color: var(--font-color);
   font-size: 16px;
   border-radius: 25px;
@@ -111,6 +112,7 @@ margin-bottom: 3px;
  background-position: left;
  transition: background-position 0.5s;
  margin: 10px auto !important;
+
 }
 .clothesTab li.activeclothTab,
 .clothesTab li:hover {

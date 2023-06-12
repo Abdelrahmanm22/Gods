@@ -98,7 +98,7 @@
 
     <div>
         <div class="container">
-            <h1>Book Up!</h1>
+            <h1 class="welstatment">Book Up!</h1>
             <div class="connexion">
                 <div class="contact-form">
                     <form>

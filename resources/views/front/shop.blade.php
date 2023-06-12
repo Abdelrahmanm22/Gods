@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="{{URL::asset('front./assets/css/headerrblack.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/headerrblack.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egyptian Gods |Online Shop</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="stylesheet" href="{{URL::asset('front./assets/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('front/assets/css/normalize.css')}}">
     <meta name="description" content="" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('front./assets/css/shop.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('front/assets/css/shop.css')}}" />
 </head>
 
 <body>
@@ -118,12 +118,10 @@
         <div class="leftContent">
             <div class="clothingTab">
                 <ul class="clothesTab">
-                    <li class="activeclothTab" data-cont=".onlineHome">Our Products</li>
+                    <li class="activeclothTab" data-cont=".onlineHome">Home</li>
                     <li class="clothes" data-cont=".onlineUnisex">Unisex's Clothing</li>
                     <li class="kids" data-cont=".onlineKids">Kids' Clothing</li>
-                    <li class="accessories" data-cont=".onlineAccesories">
-                        Accessories
-                    </li>
+                    <li class="accessories" data-cont=".onlineAccesories"> Accessories</li>
                     <li class="mags" data-cont=".onlineMags">Mugs</li>
                 </ul>
             </div>
@@ -206,7 +204,7 @@
                         </div>
                     </div> -->
                 </div>
-                <!-- <div class="onlineUnisex">
+                <div class="onlineUnisex">
                     <div class="Card">
                         <img src="{{URL::asset('front/assets/img/product/nte6.jpeg')}}" alt="T-shirt" />
                         <div class="cardInfo">
@@ -387,8 +385,8 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- <div class="onlineKids">
+                </div>
+                <div class="onlineKids">
                     <div class="Card">
                         <img src="{{URL::asset('front/assets/img/product/kid1.jpg')}}" alt="T-shirt" />
                         <div class="cardInfo">
@@ -497,8 +495,8 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- <div class="onlineAccesories">
+                </div>
+                <div class="onlineAccesories">
                     <div class="Card">
                         <img src="{{URL::asset('front/assets/img/product/bag1.jpeg')}}" alt="T-shirt" />
                         <div class="cardInfo">
@@ -692,8 +690,8 @@
                         </div>
                     </div>
 
-                </div> -->
-                <!-- <div class="onlineMags">
+                </div>
+                <div class="onlineMags">
                     <div class="Card">
                         <img src="{{URL::asset('front/assets/img/product/mag3.jpeg')}}" alt="T-shirt" />
                         <div class="cardInfo">
@@ -742,7 +740,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </main>

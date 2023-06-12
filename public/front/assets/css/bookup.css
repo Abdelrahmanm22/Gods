@@ -1,13 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 
-  
-  h1 {
-    text-align:center; 
-    color: rgb(8, 8, 8);
-    text-shadow: 2px 2px 0px #90b2f7;
-    margin:50px 0px 0px 0px
-  }
-  
-  .o {
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f6f9;
+    transition: 0.4s;
+}
+::-webkit-scrollbar-button {
+    background-color: #1f1f1f;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #cf7500;
+}
+.welstatment {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    width: 60%;
+    margin-top: 70px;
+}
+
+.o {
     position: absolute;
     top: 0;
     right: 0;
@@ -15,116 +37,60 @@
     left: 0;
     width: 100%;
     height: 1400px;
-    Background-image:  url(7.jpg)  ;
-    z-index:-1;
-  }
-  
-  .container {
-    background-color: white;
-    border-radius: 50px;
-    display: block;
-    position: relative;
-    width: 530px;
-    height: 1280px;
-    margin: auto;
-    margin-top: 100px; 
-    box-shadow: 2px 10px 10px 1px #5b8af0;
-    overflow:hidden;
-    text-align: center;
-   
-  }
-  
-  .container:hover{
-    box-shadow: 5px 5px 30px 5px #5579c9;
-    transition:translateX(20PX);
-  }
-  
-  
-  
-  .connexion {
-      position: absolute;
-      padding: 5% 13%;
-      width: 74%;
-      left:0px;
-      transition: all 0.7s;
-  }
-  
-  
-  label {
-      display: block;
-      margin-top: 5px;
-      padding: 5px 10px;
-      font-size: 15px;
-      font-weight: 600;
-      color: black;
-      margin-right: -100px;
-  }
-  
-  input{
-      display: block;
-      width: 150%;
-      margin: auto;
-      padding: 13px;
-      border: none;
-      border-radius: 10px;
-      background-color: whitesmoke;
-      color: rgb(66, 65, 65);
-      font-family: "Roboto",sans-serif;
-      opacity: 0.4;
-      margin-left: 0px;
-  }
+    background-image: url("{{ URL::asset('front/assets/img/God/7.jpg')}}");
+    /* background-image:url("URL::aasset('front/assets/img/God/7.jpg)}}") ; */
+    z-index: -1;
+}
 
-  
-  
-  select{
-    display: block;
-    width: 150%;
-    margin: auto;
-    padding: 13px;
+.contact-form form {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-form input,
+select,
+textarea {
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    background-color: whitesmoke;
     border: 0;
     border-radius: 10px;
-    color: rgb(66, 65, 65);
-    background-color: whitesmoke;
-    font-family: "Roboto",sans-serif;
-    opacity: 0.4;
+    margin: 10px auto;
+    color: #212a3e;
 }
 
-
-textarea{
-  display: block;
-  width: 150%;
-  margin: auto;
-  padding: 13px;
-  border: 0;
-  border-radius: 10px;
-background-color: whitesmoke;
-  color: rgb(49, 48, 48);
-  font-family: "Roboto",sans-serif;
-  opacity: 0.4;
+.contact-form input::placeholder {
+    color: #394867;
 }
 
-
-
-
-  input.submit {
-    color: black;
-    font-size: 13px;
-    padding: 12px 22px;
-    margin: 20px;
-    letter-spacing: 1px;
-    border: 2px solid #394867;
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     border-radius: 25px;
-    background: linear-gradient(to right, transparent 50%,#394867 50%);
-  background-size: 200%;
-  background-position: left;
-  margin-left: -5px;
-  transition: background-position 0.5s;
-      cursor: pointer;
-  }
-  
-  input.submit:hover{
-background-position: right;
-color: white;
-  }
-  
- 
+}
+.connexion {
+    margin: auto;
+    width: 60%;
+    left: 0px;
+    transition: all 0.7s;
+}
+input.submit {
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-size: 200%;
+    transition: background-position 0.5s;
+    border: 2px solid #394867;
+    background-position: left;
+}
+
+input.submit:hover {
+    background-color: #394867;
+    background-position: right;
+    color: white;
+}

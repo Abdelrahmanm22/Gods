@@ -44,8 +44,7 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
     ///code authentication Admin===============================
 
-
-    ///مهم جدا تقولهم علي الميدل وير===========
+   
     //////////////////////Routes For God//////////////////////////////
     Route::get('/home', [AdminController::class, 'home'])->name('adminHome')->middleware('auth');
     Route::get('/gods', [GodController::class, 'index'])->name('Gods')->middleware('auth');
