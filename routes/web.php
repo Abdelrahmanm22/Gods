@@ -29,8 +29,6 @@ Route::get('/testback',function(){
 // Route::get('/',function(){return view('front.index');});
 
 
-
-
 Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
 
     ///code authentication Admin===============================
@@ -44,18 +42,19 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
     ///code authentication Admin===============================
 
+    Route::group(['middleware'=>'auth'],function(){
 
-    ///مهم جدا تقولهم علي الميدل وير===========
-    //////////////////////Routes For God//////////////////////////////
-    Route::get('/home', [AdminController::class, 'home'])->name('adminHome')->middleware('auth');
-    Route::get('/gods', [GodController::class, 'index'])->name('Gods')->middleware('auth');
-    Route::get('/addGod', [GodController::class, 'addGod'])->name('addGod')->middleware('auth');
-    Route::post('/postaddGod', [GodController::class, 'postAddGod'])->name('postAddGod')->middleware('auth');
-    Route::get('/deleteGod/{God_id}',[GodController::class, 'delete'])->middleware('auth');
-    Route::get('/updateGod/{id}',[GodController::class,'update'])->middleware('auth');
-    Route::post('/postUpdateGod/{id}',[GodController::class,'postUpdate'])->name('admin.update.God')->middleware('auth');
-    //////////////////////Routes For God//////////////////////////////
-
+        ///مهم جدا تقولهم علي الميدل وير===========
+        //////////////////////Routes For God//////////////////////////////
+        Route::get('/home', [AdminController::class, 'home'])->name('adminHome');
+        Route::get('/gods', [GodController::class, 'index'])->name('Gods');
+        Route::get('/addGod', [GodController::class, 'addGod'])->name('addGod');
+        Route::post('/postaddGod', [GodController::class, 'postAddGod'])->name('postAddGod');
+        Route::get('/deleteGod/{God_id}',[GodController::class, 'delete']);
+        Route::get('/updateGod/{id}',[GodController::class,'update']);
+        Route::post('/postUpdateGod/{id}',[GodController::class,'postUpdate'])->name('admin.update.God');
+        //////////////////////Routes For God//////////////////////////////
+    });
 
     //////////////////////Routes For Product//////////////////////////////
     Route::get('/products', [ProductController::class, 'index'])->name('products')->middleware('auth');
@@ -64,6 +63,8 @@ Route::group(['namespace'=>'Back','prefix'=>'admin'],function(){
     Route::get('/updateProduct/{id}',[ProductController::class,'update'])->middleware('auth');
     Route::post('/postUpdateProduct/{id}',[ProductController::class,'postUpdate'])->name('admin.update.product')->middleware('auth');
     Route::get('/deleteProduct/{Product_id}',[ProductController::class, 'delete'])->middleware('auth');
+    Route::post('product/reorder',[ProductController::class, 'reorder'])->name('product.reorder');///important
+    // Route::post('currencies/reorder', 'CurrenciesController@reorder')->name('currencies.reorder');
     //////////////////////Routes For Product//////////////////////////////
 
     //////////////////////Admin convert client to admin And vice versa////////////////////

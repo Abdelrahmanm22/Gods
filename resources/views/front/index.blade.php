@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <!-- navigation bar -->
     <div class="imagecontainer" style="background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(images/gallery2.jpg);width:100%;">
         <nav class="navbar navbar-expand-sm  sticky-top">
             <div class="container-fluid">

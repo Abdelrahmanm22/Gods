@@ -13,8 +13,21 @@ class ProductController extends Controller
     //
     public function index(){
         $user = Auth::user();
-        $products = Product::all();
+        $products = Product::orderBy('position','ASC')->get();
         return view('back.allProduct',compact('user','products'))->with('title','Products');
+    }
+    public function reorder(Request $request){
+        $posts = Product::all();
+
+        foreach ($posts as $post) {
+            foreach ($request->order as $order) {
+                if ($order['id'] == $post->id) {
+                    $post->update(['position' => $order['position']]);
+                }
+            }
+        }
+        
+        return response('Update Successfully.', 200);
     }
 
     public function addProduct(){

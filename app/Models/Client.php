@@ -23,6 +23,7 @@ class Client extends Authenticatable
         'id',
         'user_name',
         'email',
+        'image',
         'password',
     ];
     protected $guard="custom";

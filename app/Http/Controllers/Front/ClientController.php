@@ -19,25 +19,7 @@ class ClientController extends Controller
     }
 
     public function register(){
-        
         return view('front.signup');
-    }
-
-    public function clientPhoto(Request $request){
-        $client=auth()->guard('custom')->user();
-
-        if(!empty($request->img)){
-            
-            $file_extension = $request->img->getClientOriginalExtension();
-            $file_name = time().'.'.$file_extension;
-            $path = 'image/Client';
-            $request->img->move($path,$file_name);
-            // echo 'mm';die;
-            $client->image=$file_name;
-            $client->save();
-        }
-        return redirect()->back();
-        
     }
 
     public function postRegister(Request $request){
@@ -66,6 +48,24 @@ class ClientController extends Controller
         ]);
         return redirect()->back()->with(['success'=>'registration successfully']);
     }
+    public function clientPhoto(Request $request){
+        $client=auth()->guard('custom')->user();
+
+        if(!empty($request->img)){
+            
+            $file_extension = $request->img->getClientOriginalExtension();
+            $file_name = time().'.'.$file_extension;
+            $path = 'image/Client';
+            $request->img->move($path,$file_name);
+            // echo 'mm';die;
+            $client->image=$file_name;
+            $client->save();
+        }
+        return redirect()->back();
+        
+    }
+
+    
     public function login(){
         
         return view('front.signin');

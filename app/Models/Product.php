@@ -16,6 +16,13 @@ class Product extends Model
         'name',
         'price',
         'image',
+        'position',
         'idAdmin',
     ];
+    protected static function boot(){
+        parent::boot();
+        Product::creating(function ($model){
+            $model->position =Product::max('position')+1;
+        });
+    }
 }
