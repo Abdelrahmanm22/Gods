@@ -110,17 +110,63 @@
     <div>
         <div class="container">
             <div class="contact-parent">
+                <div class="contact-child child2">
+                    <div class="inside-contact">
+                        <h2>Contact Us</h2>
+                        <h3>
+                            <span id="confirm">
+                        </h3>
+                        @if(Session::has('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{Session::get('success')}}
+                        </div>
+                        @endif
+                        <form action="{{route('postContact')}}" method="post">
+                            @csrf
+                            <label for="name">Name</label>
+                            <input id="txt_name" type="text" name="name" Required="required" placeholder="John Doe">
+                            @error('name')
+                            <small class="form-txt text-danger">{{$message}}</small><br>
+                            @enderror
+
+                            <label for="email">E-mail</label>
+                            <input id="txt_email" name="email" type="text" Required="required" placeholder="john@gmail.com">
+                            @error('email')
+                            <small class="form-txt text-danger">{{$message}}</small><br>
+                            @enderror
+
+                            <label for="phone">Phone</label>
+                            <input id="txt_phone" type="text" name="phone" Required="required" placeholder="123-45-678" pattern="[0-9]{3}-">
+                            @error('phone')
+                            <small class="form-txt text-danger">{{$message}}</small><br>
+                            @enderror
+
+
+                            <label for="massage">Massage</label>
+                            <textarea id="txt_message" name="message" rows="4" cols="20" Required="required" placeholder="Note...."></textarea>
+                            @error('message')
+                            <small class="form-txt text-danger">{{$message}}</small><br>
+                            @enderror
+
+                            <input type="submit" id="btn_send" value="SEND">
+                        </form>
+
+                    </div>
+                </div>
                 <div class="contact-child child1">
                     <p>
                         <i class="fas fa-map-marker-alt"></i> Address:<br>
-                        <span> El-Obour Buildings, Salah Salem,
-                            in front of the Central Auditing Organization,
-                            Cairo, Cairo Governorate.</span>
+                        <span> Cairo University Faculty of Archaeology.</span>
                     </p>
 
                     <p>
-                        <i class="fas fa-phone-alt"></i> Phone:
-                        <span> 01280007400</span>
+                        <i class="fa-solid fa-envelope "></i> E-mail:<br>
+                        <span> EgyptianGodsss@gmail.com</span>
+                    </p>
+
+                    <p>
+                        <span> <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d27611.873675817!2d31.36063448156922!3d30.10895503291905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LTYsdmD2Kkg2LPZitin2K3Zhw!5e0!3m2!1sar!2seg!4v1683210941119!5m2!1sar!2seg" width="400" height="180" style="margin-left: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </span>
                     </p>
                     <p>
                         Follow Us:<br>
@@ -133,63 +179,16 @@
                             <a href=""><i class="fa fa-twitter-square" style="font-size: 40px;margin-left: 40px;"></i></a>
                         </span>
                     </p>
-                    <p>
-                        <span> <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d27611.873675817!2d31.36063448156922!3d30.10895503291905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LTYsdmD2Kkg2LPZitin2K3Zhw!5e0!3m2!1sar!2seg!4v1683210941119!5m2!1sar!2seg" width="400" height="180" style="border-radius: 50px;margin-left: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </span>
-                    </p>
-
-
 
 
                 </div>
 
-                <div class="contact-child child2">
-                    <div class="inside-contact">
-                        <h2>Contact Us</h2>
-                        <h3>
-                            <span id="confirm">
-                        </h3>
-                        @if(Session::has('success'))
-                            <div class="alert alert-success" role="alert">
-                                {{Session::get('success')}}
-                            </div>
-                        @endif
-                        <form action="{{route('postContact')}}" method="post">
-                            @csrf
-                            <label for="name">Name</label>
-                            <input id="txt_name" type="text" name="name" Required="required">
-                            @error('name')
-                                <small class="form-txt text-danger">{{$message}}</small><br>
-                            @enderror
-                            
-                            <label for="email">E-mail</label>
-                            <input id="txt_email" name="email" type="text" Required="required">
-                            @error('email')
-                                <small class="form-txt text-danger">{{$message}}</small><br>
-                            @enderror
 
-                            <label for="phone">Phone</label>
-                            <input id="txt_phone" type="text" name="phone" Required="required">
-                            @error('phone')
-                                <small class="form-txt text-danger">{{$message}}</small><br>
-                            @enderror
-
-
-                            <label for="massage">Massage</label>
-                            <textarea id="txt_message" name="message" rows="4" cols="20" Required="required"></textarea>
-                            @error('message')
-                                <small class="form-txt text-danger">{{$message}}</small><br>
-                            @enderror
-
-                            <input type="submit" id="btn_send" value="SEND">
-                        </form>
-                        
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    @include('front.footer')   
+
+    @include('front.footer')
 </body>
 
 </html>

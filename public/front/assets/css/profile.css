@@ -28,12 +28,12 @@
 /* alaa css */
 
 /* footer*/
-
+/* background-image: url("{{ URL::asset('assets/img/background.png }}")  */
 body {
   background-color: var(--dark-background);
   font-family: "Cairo Play", cursive;
   color: var(--font-color);
-  background-image: url(../front/assets/img/product/backgroundlolo.jpg);
+  background-image: url("{{URL::asset('../front/assets/img/product/backgroundlolo.jpg')}}");
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../front/assets/img/product/backgroundlolo.jpg);
 
 }
@@ -43,6 +43,7 @@ main {
   margin-right: auto;
   margin-top: 150px;
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: space-around;
 }
@@ -96,8 +97,8 @@ ul {
   flex-direction: column;
 }
 .user .formImg {
-  height: 120px;
-  width: 120px;
+  height: 140px;
+  width: 140px;
   border-radius: 50%;
   box-shadow: 0px 0px 6px 9px rgba(0, 0, 0, 0.8);
   overflow: hidden;
@@ -153,7 +154,10 @@ ul {
   background-position: right;
   color: white;
 }
-
+.tabThree{
+    text-decoration: none;
+    color:#F1F6F9;
+}
 /* tabs end */
 /* tabContant start */
 
@@ -175,6 +179,7 @@ ul {
   justify-content: center;
   flex-direction: column;
 }
+
 .homeCont h3 {
   font-size: 15px;
   color: gray;
@@ -314,6 +319,29 @@ ul {
   background-color: var(--orange-btn);
   background-position: right;
   color: white;
+}
+.topPage{
+    /* border: 1px solid wheat; */
+    display: flex;
+    flex-direction: row;
+}
+.subSave{
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 35px;
+    margin: 10px auto;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    color: var(--font-color);
+    background: linear-gradient(to right, transparent 50%, #cf7500 50%);
+   background-size: 200%;
+   background-position: left;
+   transition: background-position 0.5s;
+}
+.imgchange form {
+    display: flex;
+    justify-content: flex-start;
 }
 
 /* notification end */

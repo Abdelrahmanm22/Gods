@@ -108,36 +108,47 @@
 
     <!-- End of Navigation bar -->
 
-    <!-- profile start-->
+    <!-- profile <form action="{{route('updatePhoto')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile"></label>
+                    <button type="submit" class="">Save Photo</button>
+                </form> start-->
     <main>
-        <div class="leftContent">
+
+
+        <div class="containers">
+
             <div class="user">
                 <div class="formImg">
                     <img src="{{URL::asset('image/Client').'/'.$client->image}}" alt="profile picture" />
+
                 </div>
-                
                 <div class="bio">
                     <h1 class="userName">{{$client->user_name}}</h1>
                     <p class="title">Top member in Egyptian Gods</p>
                 </div>
             </div>
 
-            <ul class="tabs">
-                <li class="activeTab" data-cont=".homeCont">Home</li>
-                <li class="tabOne" data-cont=".aboutCont">About</li>
-                <li class="tabTwo" data-cont=".privacyCont">Privacy</li>
-                <li class="tabThree" data-cont=".notificationCont">Notifications</li>
-            </ul>
-            <!-- <button type="button" ></button> -->
-            <a href="{{route('clientLogout')}}" class="btn btn-secondary">Logout</a>
-        </div>
 
+            <div class="leftContent">
+
+                <ul class="tabs">
+                    <li class="activeTab" data-cont=".homeCont">Home</li>
+                    <li class="tabOne" data-cont=".aboutCont">About</li>
+                    <li class="tabTwo" data-cont=".privacyCont">Privacy</li>
+                    <li class="tabThree" data-cont=".notificationCont">Notifications</li>
+                    <li> <a href="{{route('clientLogout')}}" class="tabThree">Logout</a> </li>
+                </ul>
+
+            </div>
+        </div>
         <div class="tabContent">
             <div class="homeCont">
                 <h3>HI THERE!</h3>
 
                 <h1>I'M {{$client->user_name}}</h1>
-                
+
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea
                     quas a officia adipisci explicabo porro quo vel nemo sit rem
@@ -147,13 +158,19 @@
                     blanditiis fuga reiciendis reprehenderit odio quo? Dicta
                     necessitatibus corrupti quaerat aliquam deserunt molestiae?
                 </p>
-                <form action="{{route('updatePhoto')}}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile"></label>
-                    <button type="submit" class="btn btn-warning">Save Photo</button>
-                </form>
-                
+                <div class="imgchange ">
+                    <form action="{{route('updatePhoto')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="filebtn ">
+                            <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
+                            <label class="custom-file-label" for="exampleInputFile"></label>
+                        </div>
+                        <div class="savebtn">
+                            <button type="submit" class="subSave">Save Photo</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
             <div class="aboutCont">
                 <form action="profile.php" method="post">
@@ -162,54 +179,53 @@
                         <p>About User.</p>
                     </div>
                     <!-- <div class="fullName"> -->
-                        <label for="fullName">Full Name:</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="{{$client->user_name}}" />
-                        <!-- </div> -->
-                        <!-- <div class="email"> -->
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" placeholder="{{$client->email}}" />
-                            <!-- </div> -->
-                            <!-- <div class="birthday"> -->
-                                <label for="birthday">Birth Date:</label>
-                                <input type="date" id="birthday" name="birthday" placeholder="09/29/2002" />
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="{{$client->user_name}}" />
+                    <!-- </div> -->
+                    <!-- <div class="email"> -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="{{$client->email}}" />
+                    <!-- </div> -->
+                    <!-- <div class="birthday"> -->
+                    <label for="birthday">Birth Date:</label>
+                    <input type="date" id="birthday" name="birthday" placeholder="09/29/2002" />
 
-                                <!-- </div> -->
-                                <!-- <div class="country"> -->
-                                    <label for="country">Country:</label>
+                    <!-- </div> -->
+                    <!-- <div class="country"> -->
+                    <label for="country">Country:</label>
                     <input type="text" id="country" name="country" placeholder="USA" />
                     <!-- </div> -->
                     <!-- <div class="telephone"> -->
-                        <label for="telephone">Phone Number: </label>
-                        <input type="tel" id="telephone" name="telephone" placeholder="212-456-7890" />
-                        <!-- </div> -->
-                    </form>
-                </div>
-
-                <div class="privacyCont">
-                    <form action="profile.php" method="post">
-                        <div class="headNotification">
-                            <h1>Privacy and Setting.</h1>
-                            <p>keep your privacy secrete.</p>
+                    <label for="telephone">Phone Number: </label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="212-456-7890" />
+                    <!-- </div> -->
+                </form>
+            </div>
+            <div class="privacyCont">
+                <form action="profile.php" method="post">
+                    <div class="headNotification">
+                        <h1>Privacy and Setting.</h1>
+                        <p>keep your privacy secrete.</p>
+                    </div>
+                    <label for="oldphone"> Enter Your Old Phone Number</label>
+                    <input type="tel" id="oldphone" name="telephone" placeholder="212-456-7890" />
+                    <div class="phone">
+                        <div class="Direction">
+                            <label for="newphone"> Enter Your New Phone Number</label>
+                            <input type="tel" id="newphone" name="telephone" placeholder="212-456-7890" />
                         </div>
-                        <label for="oldphone"> Enter Your Old Phone Number</label>
-                        <input type="tel" id="oldphone" name="telephone" placeholder="212-456-7890" />
-                        <div class="phone">
-                            <div class="Direction">
-                                <label for="newphone"> Enter Your New Phone Number</label>
-                                <input type="tel" id="newphone" name="telephone" placeholder="212-456-7890" />
-                            </div>
 
-                            <div class="Direction">
-                                <label for="confphone"> Confirm Your New Phone Number</label>
-                                <input type="tel" id="confphone" name="telephone" placeholder="212-456-7890" />
-                            </div>
+                        <div class="Direction">
+                            <label for="confphone"> Confirm Your New Phone Number</label>
+                            <input type="tel" id="confphone" name="telephone" placeholder="212-456-7890" />
                         </div>
-                        <label for="oldMail">Enter Your Old E-mail Number</label>
-                        <input type="email" id="oldMail" name="email" placeholder="john@gmail.com" required />
-                        <div class="newmail">
-                            <div class="Direction">
-                                <label for="newMail">Enter Your New E-mail Number</label>
-                                <input type="email" id="newMail" name="email" placeholder="john@gmail.com" required />
+                    </div>
+                    <label for="oldMail">Enter Your Old E-mail Number</label>
+                    <input type="email" id="oldMail" name="email" placeholder="john@gmail.com" required />
+                    <div class="newmail">
+                        <div class="Direction">
+                            <label for="newMail">Enter Your New E-mail Number</label>
+                            <input type="email" id="newMail" name="email" placeholder="john@gmail.com" required />
                         </div>
 
                         <div class="Direction">
@@ -250,9 +266,9 @@
                         <input type="checkbox" id="allowNotification" name="allownotification" value="allownotification" />
                         <label for="allowNotification">
                             Allow Notifications to be sent from the Online shop</label>
-                        </div>
-                        <div class="allow">
-                            <input type="checkbox" id="announcementsNotification" name="announcementsNotification" value="announcementsNotification" />
+                    </div>
+                    <div class="allow">
+                        <input type="checkbox" id="announcementsNotification" name="announcementsNotification" value="announcementsNotification" />
                         <label for="announcementsNotification">Announcements for New Events</label>
                     </div>
                     <div class="allow">
@@ -270,7 +286,9 @@
                     <input type="button" value="save" class="saveActive" />
                 </form>
             </div>
+
         </div>
+
     </main>
     @include('front.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -278,5 +296,3 @@
 </body>
 
 </html>
-
-
